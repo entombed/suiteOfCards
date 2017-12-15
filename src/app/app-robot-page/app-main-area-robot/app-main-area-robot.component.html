@@ -1,0 +1,20 @@
+<div class="main-area">
+  <div class="ui-g-12" *ngIf="inputArray.length">
+      <ul>
+          <li class="text-area" *ngFor="let item of inputArray; let id = index">
+              <div class="header" (click)="delFromArray($event, id, inputArray)" pDraggable="main-area" (onDragStart)="dragStart($event, 'text-area')" (onDrag)="dragKeep($event)"></div>
+              <textarea [rows]="2" [cols]="10" pInputTextarea >{{ item }}</textarea>
+          </li>
+      </ul>
+  </div>
+  <button class="buttonSidebar" pButton type="button" (click)="showSidebar = true" icon="fa-arrow-up"></button>
+</div>
+
+<p-sidebar [(visible)]="showSidebar" position="bottom" [baseZIndex]="1000">
+  <div class="ui-g-offset-2 ui-g-8">
+      <div class="ui-inputgroup">
+          <input #inputField class="ui-inputtex ui-g-10" type="text" pInputText (keyup.enter)="addToArray(inputField.value, inputArray); inputField.value = ''">
+          <button class="inputButton"type="button" pButton label="Добавить" (click)="addToArray(inputField.value, inputArray); inputField.value = ''"></button>
+      </div>
+  </div>
+</p-sidebar>

@@ -1,0 +1,7 @@
+<p-panel header="{{ titleWord }}" [collapsed]="true" [toggleable]="true">
+  <div class="accordion-block-content words">
+    <div class="word-block" *ngFor="let word of arrayWords" pDraggable="carszone" (onDragStart)="dragStart($event, 'word-block')" (onDrag)="dragKeep($event, 'word-block')"  (click)="onClick($event, 'word-block')" (dblclick)="onDblclick($event, 'word-block')">
+        {{ word }}
+    </div>
+  </div>
+</p-panel>

@@ -1,0 +1,7 @@
+<p-panel header="{{ titleBody }}" [collapsed]="true" [toggleable]="true">
+  <div class="accordion-block-content middle">
+      <div [ngClass]='"img-block"' *ngFor="let card of arrayBodys" pDraggable="carszone" (onDragStart)="dragStart($event, 'img-block')" (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
+          <img [ngClass]='"img-card"' src="./assets/images/robots/body/{{ card }}"/>
+      </div>
+  </div>
+</p-panel>
