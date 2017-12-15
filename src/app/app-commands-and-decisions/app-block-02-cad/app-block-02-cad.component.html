@@ -1,7 +1,7 @@
 <p-panel header="{{ titleBlock }}" [collapsed]="true" [toggleable]="true">
-  <div class="accordion-block-content block-02">
+  <div class="accordion-block-content block-02-cad">
     <div class="buttonHideShow">
-      <button pButton type="button" class="ui-button-info" label="Перевернуть карты" (click)="hideShowImage('block-02')"></button>
+      <button pButton type="button" class="ui-button-info" label="Перевернуть карты" (click)="hideShowImage('block-02-cad')"></button>
     </div>
     <div class="img-block" *ngFor="let card of arrayCards" pDraggable="main-area" (onDragStart)="dragStart($event, 'img-block')" (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
         <img class="img-card" src="./assets/images/commands-and-decisions/purple/{{ card }}">
