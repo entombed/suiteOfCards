@@ -1,48 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
 .accordion-block-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 250px;
-  overflow: scroll;
-  margin: 0 0 15px 0;
-  padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    overflow: scroll;
+    margin: 0 0 15px 0;
+    padding: 5px;
+}
+
+.buttonHideShow {
+    width: 150px;
+}
+
+.buttonHideShow .ui-button {
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.buttonHideShow {
+    margin-bottom: 5px;
 }
 
 .img-block {
-  margin: 2px;
-  background-size: cover;
+    margin: 2px;
+    background-size: cover;
 }
 
 .img-card,
 .img-block {
-  height: 150px;
-  border-radius: 5px;
+    height: 150px;
+    border-radius: 5px;
 }
 
 .img-block:hover,
 .word-block:hover,
 .img-block:active,
 .word-block:active {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
-  cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
+    cursor: pointer;
+}
+
+.moved {
+    position: absolute;
 }
 
 .img-block.moved,
 .img-block.moved .img-card {
-  height: 200px;
-  border-radius: 10px;
+    height: 300px;
+    border-radius: 10px;
 }
 
-.moved {
-  position: absolute;
-  border-radius: 10px;
+.img-card-hidden {
+    opacity: 0;
 }
 
 .ui-sidebar-bottom {
-  height: 5em;
+    height: 5em;
 }
 
 .ui-sidebar-mask {
-  height: 0;
+    height: 0;
 }

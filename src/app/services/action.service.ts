@@ -17,4 +17,13 @@ export class ActionService {
     currentTarget.style.left = area.clientWidth / 2 - box.width / 2 + 'px';
     currentTarget.style.top = '10vh';
   }
+
+  invertCard(target){
+    let cardHiddenStatus = target.classList.contains('img-card-hidden');
+    if (cardHiddenStatus) {
+      target.classList.remove('img-card-hidden');
+    } else {
+      target.classList.add('img-card-hidden');
+    }
+  }
 }

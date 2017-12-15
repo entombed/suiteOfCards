@@ -23,15 +23,19 @@ export class AppMainAreaBlockComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   showSidebar = false;
   currentTarget;
   inputArray: string[] = [];
+  inputText: string = '';
+  buttonText = 'Добавить';
 
-  public addToArray(inputValue: string, arrayName: any[]){
+  public addToArray(inputValue: HTMLInputElement, arrayName: any[]){
     this._addDel.add(inputValue, arrayName)
+    this.inputText = '';
   }
 
-  public delFromArray(event, id: number, arrayName){
+  public delFromArray(event, id: number, arrayName: any[]){
     if (event.ctrlKey == true) {
       this._addDel.del(id, arrayName);
     }

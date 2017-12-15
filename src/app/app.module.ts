@@ -20,6 +20,13 @@ import { AppAboutMePageComponent } from './app-about-me-page/app-about-me-page.c
 import { AppBlock01AboutMeComponent } from './app-about-me-page/app-block-01-about-me/app-block-01-about-me.component';
 import { AppBlock02AboutMeComponent } from './app-about-me-page/app-block-02-about-me/app-block-02-about-me.component';
 import { AppBlock03AboutMeComponent } from './app-about-me-page/app-block-03-about-me/app-block-03-about-me.component';
+import { AppCommandsAndDecisionsPageComponent } from './app-commands-and-decisions/app-commands-and-decisions-page.component';
+import { AppBlock01CadComponent } from './app-commands-and-decisions/app-block-01-cad/app-block-01-cad.component';
+import { AppBlock02CadComponent } from './app-commands-and-decisions/app-block-02-cad/app-block-02-cad.component';
+import { AppBlock03CadComponent } from './app-commands-and-decisions/app-block-03-cad/app-block-03-cad.component';
+import { AppScenariosPageComponent } from './app-scenarios-page/app-scenarios-page.component';
+import { AppBlock01ScenariosComponent } from './app-scenarios-page/app-block-01-scenarios/app-block-01-scenarios.component';
+
 
 
 
@@ -28,22 +35,31 @@ const appRoutes: Routes =[
   { path: '', component: AppMainPageComponent},
   { path: 'robot', component: AppRobotPageComponent},
   { path: 'about-me', component: AppAboutMePageComponent},
+  { path: 'cad', component: AppCommandsAndDecisionsPageComponent},
+  { path: 'scenarios', component: AppScenariosPageComponent},
+
 ];
 
 @NgModule({
     declarations: [
-      AppBlock01RobotComponent,
-      AppBlock02RobotComponent,
+      AppComponent,
       AppMainPageComponent,
-      AppRobotPageComponent,
       AppWordsBlockComponent,
       AppMainAreaBlockComponent,
-      AppAboutMePageComponent,
+      AppRobotPageComponent,
+      AppBlock01RobotComponent,
+      AppBlock02RobotComponent,
       AppBlock03RobotComponent,
-      AppComponent,
+      AppAboutMePageComponent,
       AppBlock01AboutMeComponent,
       AppBlock02AboutMeComponent,
-      AppBlock03AboutMeComponent
+      AppBlock03AboutMeComponent,
+      AppCommandsAndDecisionsPageComponent,
+      AppBlock01CadComponent,
+      AppBlock02CadComponent,
+      AppBlock03CadComponent,
+      AppScenariosPageComponent,
+      AppBlock01ScenariosComponent
   ],
   imports: [
     BrowserModule,
