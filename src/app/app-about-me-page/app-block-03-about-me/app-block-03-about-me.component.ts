@@ -28,7 +28,7 @@ export class AppBlock03AboutMeComponent implements OnInit {
   }
   cardCount = 30;
   arrayCards = [];
-  titleBottom = 'Ноги';
+  titleBlock = 'Ноги';
   currentTarget
 
   public dragStart(event, parentSelector){

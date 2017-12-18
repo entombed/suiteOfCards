@@ -26,7 +26,7 @@ export class AppBlock03RobotComponent implements OnInit {
       this.arrayFoots.push(i + '.jpg');
     }
   }
-  titleFoot: string = 'Ноги';
+  titleBlock: string = 'Ноги';
   cardFootCount: number = 28;
   arrayFoots: any = [];
   currentTarget;

@@ -26,7 +26,7 @@ export class AppBlock02RobotComponent implements OnInit {
       this.arrayBodys.push(i + '.jpg');
     }
   }
-  titleBody: string = 'Туловище';
+  titleBlock: string = 'Туловище';
   arrayBodys: any = [];
   cardBodyCount: number = 22;
   currentTarget;

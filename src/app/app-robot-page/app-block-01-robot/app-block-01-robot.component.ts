@@ -26,7 +26,7 @@ export class AppBlock01RobotComponent implements OnInit {
       this.arrayHeads.push(i + '.jpg');
     }
   }
-  titleHead: string = 'Голова';
+  titleBlock: string = 'Голова';
   cardHeadCount: number = 28;
   arrayHeads: any = [];
   currentTarget;
