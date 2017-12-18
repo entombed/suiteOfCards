@@ -1,3 +1,4 @@
-.img-block {
+.img-wrapper{
   background-image: url("../../../assets/images/commands-and-decisions/purple/shirt.jpg");
+  background-size: contain;
 }

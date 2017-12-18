@@ -1,0 +1,4 @@
+.img-block.moved .img-wrapper,
+.img-block.moved .img-card {
+  height: 200px;
+}

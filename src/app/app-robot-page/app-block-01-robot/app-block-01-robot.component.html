@@ -1,7 +1,12 @@
 <p-panel header="{{ titleHead }}" [collapsed]="true" [toggleable]="true">
   <div class="accordion-block-content head">
-      <div [ngClass]='"img-block"' *ngFor="let card of arrayHeads" pDraggable="carszone" (onDragStart)="dragStart($event, 'img-block')" (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
+      <div [ngClass]='"img-block"' *ngFor="let card of arrayHeads, let id = index" pDraggable="carszone" (onDragStart)="dragStart($event, 'img-block')" (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
+        <div class="img-wrapper">
           <img [ngClass]='"img-card"' src="./assets/images/robots/head/{{ card }}"/>
+        </div>
+        <div class="card-number">
+            {{id + 1}}
+        </div>
       </div>
   </div>
 </p-panel>

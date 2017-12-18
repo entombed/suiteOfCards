@@ -28,14 +28,14 @@
 }
 
 .img-card,
-.img-block {
+.img-wrapper {
     height: 150px;
     border-radius: 5px;
 }
 
-.img-block:hover,
+.img-wrapper:hover,
 .word-block:hover,
-.img-block:active,
+.img-wrapper:active,
 .word-block:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
     cursor: pointer;
@@ -45,7 +45,7 @@
     position: absolute;
 }
 
-.img-block.moved,
+.img-block.moved .img-wrapper,
 .img-block.moved .img-card {
     height: 300px;
     border-radius: 10px;
