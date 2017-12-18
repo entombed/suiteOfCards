@@ -8,7 +8,15 @@
     margin: 0 0 15px 0;
     padding: 5px;
 }
-
+.card-number {
+    background-color: #61c3ff;
+    display: inline-block;
+    border: 1px solid #45bafd;
+    padding: 0 5px;
+    border-radius: 0 0 5px 5px;
+    color: #ffffff;
+    margin-left: 10px;
+}
 .buttonHideShow {
     width: 150px;
 }
