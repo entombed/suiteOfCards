@@ -1,7 +1,7 @@
 <div class="main-area">
     <div class="ui-g-12" *ngIf="inputArray.length">
         <ul>
-            <li [ngStyle]="{'z-index':'1000'}" class="text-area" *ngFor="let item of inputArray; let id = index">
+            <li [ngStyle]="{'z-index':1000}" class="text-area" *ngFor="let item of inputArray; let id = index">
                 <div class="header" (click)="delFromArray($event, id, inputArray)" pDraggable="main-area" (onDragStart)="dragStart($event, 'text-area')" (onDrag)="dragKeep($event)"></div>
                 <textarea [rows]="2" [cols]="10" pInputTextarea >{{ item }}</textarea>
             </li>

@@ -9,7 +9,6 @@ import { ButtonModule } from 'primeng/primeng';
 import { InputTextareaModule } from 'primeng/primeng';
 import { SidebarModule } from 'primeng/primeng';
 import { AppComponent } from './app.component';
-import { DragAndDropItemService } from './services/drag-and-drop-item.service';
 import { SetZindexItemService } from './services/set-zindex-item.service';
 import { AppMainPageComponent } from './app-main-page/app-main-page.component';
 import { AppMainAreaBlockComponent } from './app-main-area-block/app-main-area-block.component';
@@ -39,6 +38,7 @@ const appRoutes: Routes =[
   { path: 'about-me', component: AppAboutMePageComponent},
   { path: 'cad', component: AppCommandsAndDecisionsPageComponent},
   { path: 'scenarios', component: AppScenariosPageComponent},
+  { path: '**', component: AppMainPageComponent}
 
 ];
 
@@ -75,7 +75,6 @@ const appRoutes: Routes =[
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ 
-    DragAndDropItemService,
     SetZindexItemService 
   ],
   bootstrap: [AppComponent]

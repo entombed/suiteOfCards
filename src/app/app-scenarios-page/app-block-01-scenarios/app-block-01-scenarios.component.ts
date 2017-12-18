@@ -12,6 +12,7 @@ import { HideShowCardsService } from '../../services/hide-show-cards.service';
   providers: [
     GetParentElementService,
     ActionService,
+    DragAndDropItemService,
     HideShowCardsService
   ]
 })
