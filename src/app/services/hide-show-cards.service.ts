@@ -7,7 +7,7 @@ export class HideShowCardsService {
 
   hideShow(arrayCards, status) {
     for (let i = 0; i < arrayCards.length; i++) {
-      if (arrayCards[i].parentElement.classList.contains('moved')) {
+      if (arrayCards[i].parentElement.parentElement.classList.contains('moved')) {
         continue;
       } else {
         if (status) {
