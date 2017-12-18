@@ -9,6 +9,8 @@ import { ButtonModule } from 'primeng/primeng';
 import { InputTextareaModule } from 'primeng/primeng';
 import { SidebarModule } from 'primeng/primeng';
 import { AppComponent } from './app.component';
+import { DragAndDropItemService } from './services/drag-and-drop-item.service';
+import { SetZindexItemService } from './services/set-zindex-item.service';
 import { AppMainPageComponent } from './app-main-page/app-main-page.component';
 import { AppMainAreaBlockComponent } from './app-main-area-block/app-main-area-block.component';
 import { AppWordsBlockComponent } from './app-words-block/app-words-block.component';
@@ -72,7 +74,10 @@ const appRoutes: Routes =[
     SidebarModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ 
+    DragAndDropItemService,
+    SetZindexItemService 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

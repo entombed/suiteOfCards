@@ -10,7 +10,6 @@ import { ActionService } from '../services/action.service';
   encapsulation: ViewEncapsulation.Emulated,
   providers: [
     GetParentElementService,
-    DragAndDropItemService,
     ActionService
   ]
 })

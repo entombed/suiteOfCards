@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { SetZindexItemService } from './set-zindex-item.service';
 
 @Injectable()
 export class ActionService {
 
-  constructor() { }
+  constructor( public _zindex: SetZindexItemService ) { }
 
   pushToDeck(currentTarget) {
     currentTarget.classList.remove('moved');
@@ -16,6 +17,7 @@ export class ActionService {
     currentTarget.classList.add('moved');
     currentTarget.style.left = area.clientWidth / 2 - box.width / 2 + 'px';
     currentTarget.style.top = '10vh';
+    this._zindex.addIndex(currentTarget);
   }
 
   invertCard(target){

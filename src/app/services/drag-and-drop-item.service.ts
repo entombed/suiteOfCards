@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { SetZindexItemService } from './set-zindex-item.service';
 
 @Injectable()
 export class DragAndDropItemService {
 
-  constructor() { }
+  constructor( public _zindex: SetZindexItemService ) { }
   areaSize = {
     height: null,
     width: null
@@ -23,8 +24,6 @@ export class DragAndDropItemService {
 
   currentObjPosX: number = null;
   currentObjPosY: number = null;
-
-  zIndex: number = null;
 
   start(event, currentTarget) {
     let area = document.querySelector('body');
@@ -47,10 +46,7 @@ export class DragAndDropItemService {
       Y: event.clientY
     };
 
-    if (this.zIndex != currentTarget.style.zIndex) {
-      this.zIndex = this.zIndex + 1;
-      currentTarget.style.zIndex = this.zIndex;
-    };
+    this._zindex.addIndex(currentTarget);
   }
 
   drag(event, target) {

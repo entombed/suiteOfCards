@@ -11,7 +11,6 @@ import { HideShowCardsService } from '../../services/hide-show-cards.service';
   encapsulation: ViewEncapsulation.Emulated,
   providers: [
     GetParentElementService,
-    DragAndDropItemService,
     ActionService,
     HideShowCardsService
   ]
