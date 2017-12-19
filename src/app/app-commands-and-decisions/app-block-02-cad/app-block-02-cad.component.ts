@@ -20,7 +20,7 @@ export class AppBlock02CadComponent implements OnInit {
 
   constructor(
     public _getParent:GetParentElementService,
-    public _dgragAndDrop:DragAndDropItemService,
+    public _dragAndDrop:DragAndDropItemService,
     public _action:ActionService,
     public _invert:HideShowCardsService ) { }
 
@@ -39,11 +39,11 @@ export class AppBlock02CadComponent implements OnInit {
   public dragStart(event, parentSelector){
     let target = event.target;
     this.currentTarget = this._getParent.getParentBySelector(target, parentSelector);
-    this._dgragAndDrop.start(event, this.currentTarget);
+    this._dragAndDrop.start(event, this.currentTarget);
   }
 
   public dragKeep(event){
-    this._dgragAndDrop.drag(event, this.currentTarget);
+    this._dragAndDrop.drag(event, this.currentTarget);
     if (this.currentTarget.classList.contains('moved') == false) {
       this.currentTarget.classList.add('moved');
     }
