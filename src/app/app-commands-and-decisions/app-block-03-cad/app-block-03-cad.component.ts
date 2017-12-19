@@ -66,9 +66,9 @@ export class AppBlock03CadComponent implements OnInit {
     this._action.pushToMainArea(target, currentTarget)
   }
 
-  public hideShowImage(selector) {
+  public hideShowImage(selector, parentSelector) {
     this.hiddenMode = !this.hiddenMode;
     let arrayCards = document.querySelectorAll( 'div.'+ selector + ' img.img-card');
-    this._invert.hideShow(arrayCards, this.hiddenMode);
+    this._invert.hideShow(arrayCards, this.hiddenMode, parentSelector);
   }
 }

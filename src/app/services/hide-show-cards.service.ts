@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
+import { GetParentElementService } from './get-parent-element.service'
 
 @Injectable()
 export class HideShowCardsService {
 
-  constructor() { }
+  constructor( public _getParent:GetParentElementService ) { }
 
-  hideShow(arrayCards, status) {
+  hideShow(arrayCards, status, parentSelector) {
     for (let i = 0; i < arrayCards.length; i++) {
-      if (arrayCards[i].parentElement.parentElement.classList.contains('moved')) {
+      let parent = this._getParent.getParentBySelector(arrayCards[i], parentSelector)
+      if (parent.classList.contains('moved')) {
         continue;
       } else {
         if (status) {
