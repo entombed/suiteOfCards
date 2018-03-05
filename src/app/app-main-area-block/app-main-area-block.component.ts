@@ -61,5 +61,4 @@ export class AppMainAreaBlockComponent implements OnInit {
   hideSideBar(event){
     this.pushHideSideBar.emit(false);
   }
-
 }
