@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 import { AddDelArrayItemService } from '../services/add-del-array-item.service';
 import { GetParentElementService } from '../services/get-parent-element.service';
 import { DragAndDropItemService } from '../services/drag-and-drop-item.service';
@@ -22,9 +22,13 @@ export class AppMainAreaBlockComponent implements OnInit {
     public _dragAndDrop:DragAndDropItemService ) { }
 
   ngOnInit() {
+
   }
-  
-  showSidebar = false;
+
+  @Input() pullShowSidebar;
+
+  @Output() pushHideSideBar = new EventEmitter<boolean>();
+
   currentTarget;
   inputArray: string[] = [];
   inputText: string = '';
@@ -53,4 +57,9 @@ export class AppMainAreaBlockComponent implements OnInit {
       this.currentTarget.classList.add('moved');
     }
   }
+
+  hideSideBar(event){
+    this.pushHideSideBar.emit(false);
+  }
+
 }

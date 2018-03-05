@@ -7,10 +7,9 @@
             </li>
         </ul>
     </div>
-    <button class="buttonSidebar" pButton type="button" (click)="showSidebar = true" icon="fa-arrow-up"></button>
 </div>
 
-<p-sidebar [(visible)]="showSidebar" position="bottom" [baseZIndex]="1000">
+<p-sidebar [(visible)]="pullShowSidebar" (onHide)="hideSideBar(false)" position="bottom" [baseZIndex]="1000">
     <div class="ui-g-offset-2 ui-g-8">
         <div class="ui-inputgroup">
             <input #inputField class="ui-inputtex ui-g-10" type="text" pInputText (keyup.enter)="addToArray(inputField.value, inputArray)" [(ngModel)]="inputText">

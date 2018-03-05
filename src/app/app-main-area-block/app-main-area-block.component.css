@@ -14,11 +14,13 @@
 }
 
 .text-area textarea {
-  max-width: 300px !important;
-  border-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
-.header {
+.text-area .header {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;  
   height:20px;
   background-color: #74c0ff;
 }
