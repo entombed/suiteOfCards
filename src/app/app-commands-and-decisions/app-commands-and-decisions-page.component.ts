@@ -11,5 +11,13 @@ export class AppCommandsAndDecisionsPageComponent implements OnInit {
 
   ngOnInit() {
   }
+  statusTextArea = false;
+  
+  showInputTextArea(status){
+    this.statusTextArea = status;
+  }
 
+  hideSideBar(event){
+    this.statusTextArea = event;
+  }
 }

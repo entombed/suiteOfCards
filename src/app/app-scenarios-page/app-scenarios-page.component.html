@@ -1,4 +1,7 @@
-<app-main-area-block></app-main-area-block>
+<app-main-area-block [pullShowSidebar]="statusTextArea" (pushHideSideBar)="hideSideBar($event)"></app-main-area-block>
 <app-block-01-scenarios></app-block-01-scenarios>
 <app-words-block></app-words-block>
+<div class="ui-g-12">
+    <button pButton type="button" (click)="showInputTextArea(true)" label="Открыть панель ввода слова" class="ui-button-success"></button>
+</div>
 <app-main-page></app-main-page>

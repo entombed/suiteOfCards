@@ -60,8 +60,17 @@ export class CustomPageComponent implements OnInit {
   }
 
   sideBarCardsChoice = false;
+  statusTextArea = false;
 
   showSideBar(status){
     this.sideBarCardsChoice = status;
+  }
+
+  showInputTextArea(status){
+    this.statusTextArea = status;
+  }
+
+  hideSideBar(event){
+    this.statusTextArea = event;
   }
 }
