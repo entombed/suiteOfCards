@@ -8,6 +8,7 @@ import { DragDropModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
 import { InputTextareaModule } from 'primeng/primeng';
 import { SidebarModule } from 'primeng/primeng';
+import { CheckboxModule } from 'primeng/checkbox';
 import { AppComponent } from './app.component';
 import { SetZindexItemService } from './services/set-zindex-item.service';
 import { AppMainPageComponent } from './app-main-page/app-main-page.component';
@@ -27,6 +28,7 @@ import { AppBlock02CadComponent } from './app-commands-and-decisions/app-block-0
 import { AppBlock03CadComponent } from './app-commands-and-decisions/app-block-03-cad/app-block-03-cad.component';
 import { AppScenariosPageComponent } from './app-scenarios-page/app-scenarios-page.component';
 import { AppBlock01ScenariosComponent } from './app-scenarios-page/app-block-01-scenarios/app-block-01-scenarios.component';
+import { CustomPageComponent } from './custom-page/custom-page.component';
 
 
 
@@ -38,6 +40,7 @@ const appRoutes: Routes =[
   { path: 'about-me', component: AppAboutMePageComponent},
   { path: 'cad', component: AppCommandsAndDecisionsPageComponent},
   { path: 'scenarios', component: AppScenariosPageComponent},
+  { path: 'custom-page', component: CustomPageComponent},
   { path: '**', component: AppMainPageComponent}
 
 ];
@@ -61,7 +64,8 @@ const appRoutes: Routes =[
       AppBlock02CadComponent,
       AppBlock03CadComponent,
       AppScenariosPageComponent,
-      AppBlock01ScenariosComponent
+      AppBlock01ScenariosComponent,
+      CustomPageComponent
   ],
   imports: [
     BrowserModule,
@@ -72,6 +76,7 @@ const appRoutes: Routes =[
     ButtonModule,
     InputTextareaModule,
     SidebarModule,
+    CheckboxModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ 

@@ -1,0 +1,91 @@
+<p-sidebar [(visible)]="sideBarCardsChoice">
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.robot01.status" binary="true"></p-checkbox>{{buttons.robot01.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.robot02.status" binary="true"></p-checkbox>{{buttons.robot02.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.robot03.status" binary="true"></p-checkbox>{{buttons.robot03.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.aboutMe01.status" binary="true"></p-checkbox>{{buttons.aboutMe01.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.aboutMe02.status" binary="true"></p-checkbox>{{buttons.aboutMe02.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.aboutMe03.status" binary="true"></p-checkbox>{{buttons.aboutMe03.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.cad01.status" binary="true"></p-checkbox>{{buttons.cad01.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.cad02.status" binary="true"></p-checkbox>{{buttons.cad02.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.cad03.status" binary="true"></p-checkbox>{{buttons.cad03.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.scenarios.status" binary="true"></p-checkbox>{{buttons.scenarios.name}}
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="buttons.words.status" binary="true"></p-checkbox>{{buttons.words.name}}
+  </div>
+  <div class="ui-g-12">
+    <button pButton type="button" (click)="showSideBar()" label="Закрыть панель" icon="fa-close" iconPos="right" [ngStyle]="{'width':'100%'}"></button>
+  </div>
+</p-sidebar>
+
+<app-main-area-block></app-main-area-block>
+
+<div *ngIf="buttons.robot01.status">
+  <app-block-01-robot></app-block-01-robot>
+</div>
+
+<div *ngIf="buttons.robot02.status">
+  <app-block-02-robot></app-block-02-robot>
+</div>
+
+<div *ngIf="buttons.robot03.status">
+  <app-block-03-robot></app-block-03-robot>
+</div>
+
+<div *ngIf="buttons.aboutMe01.status">
+  <app-block-01-about-me></app-block-01-about-me>
+</div>
+
+<div *ngIf="buttons.aboutMe02.status">
+  <app-block-02-about-me></app-block-02-about-me>
+</div>
+
+<div *ngIf="buttons.aboutMe03.status">
+  <app-block-03-about-me></app-block-03-about-me>
+</div>
+
+<div *ngIf="buttons.cad01.status">
+  <app-block-01-cad></app-block-01-cad>
+</div>
+
+<div *ngIf="buttons.cad02.status">
+  <app-block-02-cad></app-block-02-cad>
+</div>
+
+<div *ngIf="buttons.cad03.status">
+  <app-block-03-cad></app-block-03-cad>
+</div>
+
+<div *ngIf="buttons.scenarios.status">
+  <app-block-01-scenarios></app-block-01-scenarios>
+</div>
+
+<div *ngIf="buttons.words.status">
+  <app-words-block></app-words-block>
+</div>
+
+<div class="ui-g-12">
+    <button pButton type="button" (click)="showSideBar()" label="Открыть панель выбора колод" class="ui-button-success"></button>
+</div>
+
+<app-main-page></app-main-page>
+
