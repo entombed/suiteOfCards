@@ -33,7 +33,7 @@
     <p-checkbox [(ngModel)]="cardDecks.words.status" binary="true" label="{{cardDecks.words.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <button pButton type="button" (click)="showSideBar()" label="Закрыть панель" icon="fa-close" iconPos="right" [ngStyle]="{'width':'100%'}"></button>
+    <button pButton type="button" (click)="showSideBar(false)" label="Закрыть панель" icon="fa-close" iconPos="right" [ngStyle]="{'width':'100%'}"></button>
   </div>
 </p-sidebar>
 
@@ -84,7 +84,7 @@
 </div>
 
 <div class="ui-g-12">
-  <button pButton type="button" (click)="showSideBar()" label="Открыть панель выбора колод" class="ui-button-success"></button>
+  <button pButton type="button" (click)="showSideBar(true)" label="Открыть панель выбора колод" class="ui-button-success"></button>
 </div>
 
 <app-main-page></app-main-page>

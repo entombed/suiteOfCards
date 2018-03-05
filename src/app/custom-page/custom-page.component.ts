@@ -61,7 +61,7 @@ export class CustomPageComponent implements OnInit {
 
   sideBarCardsChoice = false;
 
-  showSideBar(){
-    this.sideBarCardsChoice = !this.sideBarCardsChoice;
+  showSideBar(status){
+    this.sideBarCardsChoice = status;
   }
 }

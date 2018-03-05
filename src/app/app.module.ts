@@ -31,10 +31,6 @@ import { AppScenariosPageComponent } from './app-scenarios-page/app-scenarios-pa
 import { AppBlock01ScenariosComponent } from './app-scenarios-page/app-block-01-scenarios/app-block-01-scenarios.component';
 import { CustomPageComponent } from './custom-page/custom-page.component';
 
-
-
-
-
 const appRoutes: Routes =[
   { path: '', component: AppMainPageComponent},
   { path: 'robot', component: AppRobotPageComponent},
