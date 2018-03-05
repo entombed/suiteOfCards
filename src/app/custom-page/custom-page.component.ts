@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-custom-page',
@@ -10,6 +10,10 @@ export class CustomPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(){
+    console.log("change")
   }
 
   cardDecks = {
@@ -59,18 +63,18 @@ export class CustomPageComponent implements OnInit {
     }
   }
 
-  sideBarCardsChoice = false;
+  statusCardsChoice = false;
   statusTextArea = false;
 
-  showSideBar(status){
-    this.sideBarCardsChoice = status;
+  showCardsChoice(status){
+    this.statusCardsChoice = status;
   }
 
   showInputTextArea(status){
     this.statusTextArea = status;
   }
 
-  hideSideBar(event){
+  hideTextArea(event){
     this.statusTextArea = event;
   }
 }
