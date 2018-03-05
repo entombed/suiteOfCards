@@ -12,7 +12,7 @@ export class CustomPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  buttons = {
+  cardDecks = {
     robot01:{
       name: 'Роботы - голова',
       status: false,

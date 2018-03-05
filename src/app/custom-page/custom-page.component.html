@@ -1,36 +1,36 @@
 <p-sidebar [(visible)]="sideBarCardsChoice">
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.robot01.status" binary="true"></p-checkbox>{{buttons.robot01.name}}
+    <p-checkbox [(ngModel)]="cardDecks.robot01.status" binary="true" label="{{cardDecks.robot01.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.robot02.status" binary="true"></p-checkbox>{{buttons.robot02.name}}
+    <p-checkbox [(ngModel)]="cardDecks.robot02.status" binary="true" label="{{cardDecks.robot02.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.robot03.status" binary="true"></p-checkbox>{{buttons.robot03.name}}
+    <p-checkbox [(ngModel)]="cardDecks.robot03.status" binary="true" label="{{cardDecks.robot03.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.aboutMe01.status" binary="true"></p-checkbox>{{buttons.aboutMe01.name}}
+    <p-checkbox [(ngModel)]="cardDecks.aboutMe01.status" binary="true" label="{{cardDecks.aboutMe01.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.aboutMe02.status" binary="true"></p-checkbox>{{buttons.aboutMe02.name}}
+    <p-checkbox [(ngModel)]="cardDecks.aboutMe02.status" binary="true" label="{{cardDecks.aboutMe02.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.aboutMe03.status" binary="true"></p-checkbox>{{buttons.aboutMe03.name}}
+    <p-checkbox [(ngModel)]="cardDecks.aboutMe03.status" binary="true" label="{{cardDecks.aboutMe03.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.cad01.status" binary="true"></p-checkbox>{{buttons.cad01.name}}
+    <p-checkbox [(ngModel)]="cardDecks.cad01.status" binary="true" label="{{cardDecks.cad01.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.cad02.status" binary="true"></p-checkbox>{{buttons.cad02.name}}
+    <p-checkbox [(ngModel)]="cardDecks.cad02.status" binary="true" label="{{cardDecks.cad02.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.cad03.status" binary="true"></p-checkbox>{{buttons.cad03.name}}
+    <p-checkbox [(ngModel)]="cardDecks.cad03.status" binary="true" label="{{cardDecks.cad03.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.scenarios.status" binary="true"></p-checkbox>{{buttons.scenarios.name}}
+    <p-checkbox [(ngModel)]="cardDecks.scenarios.status" binary="true" label="{{cardDecks.scenarios.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="buttons.words.status" binary="true"></p-checkbox>{{buttons.words.name}}
+    <p-checkbox [(ngModel)]="cardDecks.words.status" binary="true" label="{{cardDecks.words.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
     <button pButton type="button" (click)="showSideBar()" label="Закрыть панель" icon="fa-close" iconPos="right" [ngStyle]="{'width':'100%'}"></button>
@@ -39,52 +39,52 @@
 
 <app-main-area-block></app-main-area-block>
 
-<div *ngIf="buttons.robot01.status">
+<div *ngIf="cardDecks.robot01.status">
   <app-block-01-robot></app-block-01-robot>
 </div>
 
-<div *ngIf="buttons.robot02.status">
+<div *ngIf="cardDecks.robot02.status">
   <app-block-02-robot></app-block-02-robot>
 </div>
 
-<div *ngIf="buttons.robot03.status">
+<div *ngIf="cardDecks.robot03.status">
   <app-block-03-robot></app-block-03-robot>
 </div>
 
-<div *ngIf="buttons.aboutMe01.status">
+<div *ngIf="cardDecks.aboutMe01.status">
   <app-block-01-about-me></app-block-01-about-me>
 </div>
 
-<div *ngIf="buttons.aboutMe02.status">
+<div *ngIf="cardDecks.aboutMe02.status">
   <app-block-02-about-me></app-block-02-about-me>
 </div>
 
-<div *ngIf="buttons.aboutMe03.status">
+<div *ngIf="cardDecks.aboutMe03.status">
   <app-block-03-about-me></app-block-03-about-me>
 </div>
 
-<div *ngIf="buttons.cad01.status">
+<div *ngIf="cardDecks.cad01.status">
   <app-block-01-cad></app-block-01-cad>
 </div>
 
-<div *ngIf="buttons.cad02.status">
+<div *ngIf="cardDecks.cad02.status">
   <app-block-02-cad></app-block-02-cad>
 </div>
 
-<div *ngIf="buttons.cad03.status">
+<div *ngIf="cardDecks.cad03.status">
   <app-block-03-cad></app-block-03-cad>
 </div>
 
-<div *ngIf="buttons.scenarios.status">
+<div *ngIf="cardDecks.scenarios.status">
   <app-block-01-scenarios></app-block-01-scenarios>
 </div>
 
-<div *ngIf="buttons.words.status">
+<div *ngIf="cardDecks.words.status">
   <app-words-block></app-words-block>
 </div>
 
 <div class="ui-g-12">
-    <button pButton type="button" (click)="showSideBar()" label="Открыть панель выбора колод" class="ui-button-success"></button>
+  <button pButton type="button" (click)="showSideBar()" label="Открыть панель выбора колод" class="ui-button-success"></button>
 </div>
 
 <app-main-page></app-main-page>
