@@ -1,5 +1,5 @@
 .main-area {
-  margin: 5px;
+  margin: 0.5em;
   border-color: #adadad;
   border-style: solid;
   border-width: 1px;
@@ -9,19 +9,20 @@
 
 .text-area {
   display: inline-block;
-  padding: 2px;
+  padding: 0.15em;
   z-index: 1000;
 }
 
 .text-area textarea {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  min-width: 15em;
 }
 
 .text-area .header {
   border-top-left-radius: 0.25em;
   border-top-right-radius: 0.25em;  
-  height:20px;
+  height:1.5em;
   background-color: #74c0ff;
 }
 
