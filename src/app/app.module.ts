@@ -3,12 +3,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { PanelModule } from 'primeng/primeng';
-import { DragDropModule } from 'primeng/primeng';
-import { ButtonModule } from 'primeng/primeng';
-import { InputTextareaModule } from 'primeng/primeng';
-import { SidebarModule } from 'primeng/primeng';
-import { CheckboxModule } from 'primeng/checkbox';
+import {PanelModule} from 'primeng/panel';
+import {DragDropModule} from 'primeng/dragdrop';
+import {ButtonModule} from 'primeng/button';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {SidebarModule} from 'primeng/sidebar';
+import {CheckboxModule} from 'primeng/checkbox';
+
 import { AppComponent } from './app.component';
 import { SetZindexItemService } from './services/set-zindex-item.service';
 import { AppMainPageComponent } from './app-main-page/app-main-page.component';
@@ -71,13 +72,13 @@ const appRoutes: Routes =[
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes),
     PanelModule,
     DragDropModule,
     ButtonModule,
     InputTextareaModule,
     SidebarModule,
-    CheckboxModule,
-    RouterModule.forRoot(appRoutes)
+    CheckboxModule
   ],
   providers: [ 
     SetZindexItemService 
