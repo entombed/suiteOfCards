@@ -14,47 +14,47 @@ export class CustomPageComponent implements OnInit {
 
   buttons = {
     robot01:{
-      name: 'Robot 01',
+      name: 'Роботы - голова',
       status: false,
     },
     robot02:{
-      name: 'Robot 02',
+      name: 'Роботы - туловище',
       status: false,
     },
     robot03:{
-      name: 'Robot 03',
+      name: 'Роботы - ноги',
       status: false,
     },
     aboutMe01:{
-      name: 'aboutMe01',
+      name: 'Обо мне - голова',
       status: false,
     },
     aboutMe02:{
-      name: 'aboutMe01',
+      name: 'Обо мне - туловище',
       status: false,
     },
     aboutMe03:{
-      name: 'aboutMe01',
+      name: 'Обо мне - ноги',
       status: false,
     },
     cad01:{
-      name: 'cad01',
+      name: 'Приказание и действие - Зеленая рубашка',
       status: false,
     },
     cad02:{
-      name: 'cad01',
+      name: 'Приказание и действие - Фиолетовая рубашка',
       status: false,
     },
     cad03:{
-      name: 'cad01',
+      name: 'Приказание и действие - Желтая рубашка',
       status: false,
     },
     scenarios:{
-      name: 'scenarios',
+      name: 'Сценарий в действии',
       status: false,
     },
     words:{
-      name: 'words',
+      name: 'Действия',
       status: false,
     }
   }
