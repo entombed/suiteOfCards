@@ -6,7 +6,8 @@
     <!-- <div class="buttonHideShow">
       <button pButton type="button" class="ui-button-info" label="Перевернуть карты" (click)="hideShowImage('block-03-cad', 'img-block')"></button>
     </div> -->
-    <div class="img-block" *ngFor="let card of arrayCards, let id = index" pDraggable="main-area" (onDragStart)="dragStart($event, 'img-block')" (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
+    <div class="img-block" *ngFor="let card of arrayCards, let id = index" pDraggable="main-area" (onDragStart)="dragStart($event, 'img-block')"
+      (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
       <div class="img-wrapper">
         <img class="img-card" src="./assets/images/commands-and-decisions/yellow/{{ card }}">
       </div>
@@ -19,4 +20,3 @@
     <button pButton type="button" icon="fa-refresh" class="ui-button-info" (click)="hideShowImage('block-03-cad', 'img-block')"></button>
   </p-footer>
 </p-panel>
-  
