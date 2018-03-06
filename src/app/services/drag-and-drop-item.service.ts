@@ -6,6 +6,7 @@ export class DragAndDropItemService {
 
   constructor( public _zindex: SetZindexItemService ) { }
   areaSize = {
+    offsetTop: null,
     height: null,
     width: null
   };
@@ -25,9 +26,10 @@ export class DragAndDropItemService {
   currentObjPosX: number = null;
   currentObjPosY: number = null;
 
-  start(event, currentTarget) {
-    let area = document.querySelector('body');
+  start(event, target) {
+    let area = <HTMLElement>document.querySelector('body');
     let box = event.target.getBoundingClientRect();
+    this._zindex.addIndex(target);
 
     this.targetProperties = {
       X: box.left + pageXOffset,
@@ -37,7 +39,8 @@ export class DragAndDropItemService {
     };
 
     this.areaSize = {
-      height: area.clientHeight,
+      offsetTop: area.offsetTop,
+      height: area.clientHeight + area.offsetTop,
       width: area.clientWidth
     };
 
@@ -45,8 +48,8 @@ export class DragAndDropItemService {
       X: event.clientX,
       Y: event.clientY
     };
-
-    this._zindex.addIndex(currentTarget);
+    target.style.left = this.targetProperties.X + 'px';
+    target.style.top = this.targetProperties.Y + 'px';
   }
 
   drag(event, target) {
@@ -55,7 +58,7 @@ export class DragAndDropItemService {
   }
 
   setStylePositionAttribyte(target) {
-    if (this.currentObjPosY >= 0 && this.currentObjPosY <= this.areaSize.height - this.targetProperties.height && this.currentObjPosX >= 0 && this.currentObjPosX <= this.areaSize.width - this.targetProperties.width) {
+    if (this.currentObjPosY >= this.areaSize.offsetTop && this.currentObjPosY <= this.areaSize.height - this.targetProperties.height && this.currentObjPosX >= 0 && this.currentObjPosX <= this.areaSize.width - this.targetProperties.width) {
       target.style.left = this.currentObjPosX + 'px';
       target.style.top = this.currentObjPosY + 'px';
     }

@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 250px;
-    overflow: scroll;
+    min-height: 250px;
+    /* overflow: scroll; */
     margin: 0 0 15px 0;
     padding: 5px;
 }
@@ -18,7 +18,10 @@
     margin-left: 10px;
 }
 .buttonHideShow {
-    width: 150px;
+    width: 115px;
+}
+.buttonHideShow .ui-button-text {
+    padding: 0.25em;
 }
 
 .buttonHideShow .ui-button {

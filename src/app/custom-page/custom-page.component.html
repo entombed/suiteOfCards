@@ -1,30 +1,12 @@
 <p-sidebar [(visible)]="statusCardsChoice">
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.robot01.status" binary="true" label="{{cardDecks.robot01.name}}"></p-checkbox>
+    <p-checkbox [(ngModel)]="cardDecks.robotDeck.status" binary="true" label="{{cardDecks.robotDeck.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.robot02.status" binary="true" label="{{cardDecks.robot02.name}}"></p-checkbox>
+    <p-checkbox [(ngModel)]="cardDecks.aboutMeDeck.status" binary="true" label="{{cardDecks.aboutMeDeck.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.robot03.status" binary="true" label="{{cardDecks.robot03.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.aboutMe01.status" binary="true" label="{{cardDecks.aboutMe01.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.aboutMe02.status" binary="true" label="{{cardDecks.aboutMe02.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.aboutMe03.status" binary="true" label="{{cardDecks.aboutMe03.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.cad01.status" binary="true" label="{{cardDecks.cad01.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.cad02.status" binary="true" label="{{cardDecks.cad02.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.cad03.status" binary="true" label="{{cardDecks.cad03.name}}"></p-checkbox>
+    <p-checkbox [(ngModel)]="cardDecks.cadDeck.status" binary="true" label="{{cardDecks.cadDeck.name}}"></p-checkbox>
   </div>
   <div class="ui-g-12">
     <p-checkbox [(ngModel)]="cardDecks.scenarios.status" binary="true" label="{{cardDecks.scenarios.name}}"></p-checkbox>
@@ -39,39 +21,21 @@
 
 <app-main-area-block [pullShowSidebar]="statusTextArea" (pushHideSideBar)="hideTextArea($event)"></app-main-area-block>
 
-<div *ngIf="cardDecks.robot01.status">
+<div *ngIf="cardDecks.robotDeck.status">
   <app-block-01-robot></app-block-01-robot>
-</div>
-
-<div *ngIf="cardDecks.robot02.status">
   <app-block-02-robot></app-block-02-robot>
-</div>
-
-<div *ngIf="cardDecks.robot03.status">
   <app-block-03-robot></app-block-03-robot>
 </div>
 
-<div *ngIf="cardDecks.aboutMe01.status">
+<div *ngIf="cardDecks.aboutMeDeck.status">
   <app-block-01-about-me></app-block-01-about-me>
-</div>
-
-<div *ngIf="cardDecks.aboutMe02.status">
   <app-block-02-about-me></app-block-02-about-me>
-</div>
-
-<div *ngIf="cardDecks.aboutMe03.status">
   <app-block-03-about-me></app-block-03-about-me>
 </div>
 
-<div *ngIf="cardDecks.cad01.status">
+<div *ngIf="cardDecks.cadDeck.status">
   <app-block-01-cad></app-block-01-cad>
-</div>
-
-<div *ngIf="cardDecks.cad02.status">
   <app-block-02-cad></app-block-02-cad>
-</div>
-
-<div *ngIf="cardDecks.cad03.status">
   <app-block-03-cad></app-block-03-cad>
 </div>
 

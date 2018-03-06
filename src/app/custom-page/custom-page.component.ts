@@ -17,41 +17,18 @@ export class CustomPageComponent implements OnInit {
   }
 
   cardDecks = {
-    robot01:{
-      name: 'Роботы - голова',
+
+    robotDeck: {
       status: false,
+      name: 'Роботы',
     },
-    robot02:{
-      name: 'Роботы - туловище',
+    aboutMeDeck: {
       status: false,
+      name: 'Обо мне',
     },
-    robot03:{
-      name: 'Роботы - ноги',
+    cadDeck: {
       status: false,
-    },
-    aboutMe01:{
-      name: 'Обо мне - голова',
-      status: false,
-    },
-    aboutMe02:{
-      name: 'Обо мне - туловище',
-      status: false,
-    },
-    aboutMe03:{
-      name: 'Обо мне - ноги',
-      status: false,
-    },
-    cad01:{
-      name: 'Приказание и действие - Зеленая рубашка',
-      status: false,
-    },
-    cad02:{
-      name: 'Приказание и действие - Фиолетовая рубашка',
-      status: false,
-    },
-    cad03:{
-      name: 'Приказание и действие - Желтая рубашка',
-      status: false,
+      name: 'Приказание и действие',
     },
     scenarios:{
       name: 'Сценарий в действии',
