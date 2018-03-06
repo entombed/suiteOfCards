@@ -1,4 +1,7 @@
 <p-panel header="{{ titleBlock }}" [collapsed]="true" [toggleable]="true">
+  <div class="ui-g">
+    <button pButton type="button" class="ui-button-info" label="Перевернуть карты" (click)="hideShowImage('block-01-cad', 'img-block')"></button>
+  </div>
   <div class="accordion-block-content block-01-cad">
     <!-- <div class="buttonHideShow">
       <button pButton type="button" class="ui-button-info" label="Перевернуть карты" (click)="hideShowImage('block-01-cad', 'img-block')"></button>
@@ -13,6 +16,6 @@
     </div>
   </div>
   <p-footer>
-    <button pButton type="button" class="ui-button-info" label="Перевернуть карты" (click)="hideShowImage('block-01-cad', 'img-block')"></button>
+    <button pButton type="button" icon="fa-refresh" class="ui-button-info" (click)="hideShowImage('block-01-cad', 'img-block')"></button>
   </p-footer>
 </p-panel>
