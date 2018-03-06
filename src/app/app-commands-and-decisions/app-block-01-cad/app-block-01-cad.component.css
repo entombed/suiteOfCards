@@ -2,3 +2,7 @@
   background-image: url("../../../assets/images/commands-and-decisions/green/shirt.jpg");
   background-size: contain;
 }
+.card-number {
+  background-color: #005225;
+  border: 1px solid #00632c;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-custom-page',
@@ -10,10 +10,6 @@ export class CustomPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges(){
-    console.log("change")
   }
 
   cardDecks = {
