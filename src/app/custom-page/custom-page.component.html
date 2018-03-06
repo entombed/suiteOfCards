@@ -22,24 +22,36 @@
 <app-main-area-block [pullShowSidebar]="statusTextArea" (pushHideSideBar)="hideTextArea($event)"></app-main-area-block>
 
 <div *ngIf="cardDecks.robotDeck.status">
+  <h3>
+    {{cardDecks.robotDeck.name}}
+  </h3>
   <app-block-01-robot></app-block-01-robot>
   <app-block-02-robot></app-block-02-robot>
   <app-block-03-robot></app-block-03-robot>
 </div>
 
 <div *ngIf="cardDecks.aboutMeDeck.status">
+  <h3>
+    {{cardDecks.aboutMeDeck.name}}
+  </h3>
   <app-block-01-about-me></app-block-01-about-me>
   <app-block-02-about-me></app-block-02-about-me>
   <app-block-03-about-me></app-block-03-about-me>
 </div>
 
 <div *ngIf="cardDecks.cadDeck.status">
+  <h3>
+    {{cardDecks.cadDeck.name}}
+  </h3>
   <app-block-01-cad></app-block-01-cad>
   <app-block-02-cad></app-block-02-cad>
   <app-block-03-cad></app-block-03-cad>
 </div>
 
 <div *ngIf="cardDecks.scenarios.status">
+  <h3>
+    {{cardDecks.scenarios.name}}
+  </h3>
   <app-block-01-scenarios></app-block-01-scenarios>
 </div>
 
