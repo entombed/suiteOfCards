@@ -1,17 +1,19 @@
 <div class="main-area">
-    <div class="ui-g-12" *ngIf="inputArray.length">
-        <div class="text-item-block" *ngFor="let item of inputArray; let id = index">
-            <div class="header" (click)="delFromArray($event, id, inputArray)" pDraggable="main-area" (onDragStart)="dragStart($event, 'text-item-block')" (onDrag)="dragKeep($event)"></div>
-            <textarea [rows]="2" [cols]="10" pInputTextarea >{{ item }}</textarea>
-        </div>
+  <div class="ui-g-12" *ngIf="inputArray.length">
+    <div [ngStyle]="{'z-index':1000}" class="text-item-block" *ngFor="let item of inputArray; let id = index">
+      <div class="header" (click)="delFromArray($event, id, inputArray)" pDraggable="main-area" (onDragStart)="dragStart($event, 'text-item-block')"
+        (onDrag)="dragKeep($event)"></div>
+      <textarea [rows]="2" [cols]="10" pInputTextarea>{{ item }}</textarea>
     </div>
+  </div>
 </div>
 
 <p-sidebar [(visible)]="pullShowSidebar" (onHide)="hideSideBar(false)" position="bottom" [baseZIndex]="1000">
-    <div class="ui-g-offset-2 ui-g-8">
-        <div class="ui-inputgroup">
-            <input #inputField class="ui-inputtex ui-g-10" type="text" pInputText (keyup.enter)="addToArray(inputField.value, inputArray)" [(ngModel)]="inputText">
-            <button class="inputButton" type="button" pButton label="{{ buttonText }}" (click)="addToArray(inputField.value, inputArray)"></button>
-        </div>
+  <div class="ui-g-offset-2 ui-g-8">
+    <div class="ui-inputgroup">
+      <input #inputField class="ui-inputtex ui-g-10" type="text" pInputText (keyup.enter)="addToArray(inputField.value, inputArray)"
+        [(ngModel)]="inputText">
+      <button class="inputButton" type="button" pButton label="{{ buttonText }}" (click)="addToArray(inputField.value, inputArray)"></button>
     </div>
+  </div>
 </p-sidebar>

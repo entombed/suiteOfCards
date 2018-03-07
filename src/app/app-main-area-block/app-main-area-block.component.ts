@@ -17,9 +17,9 @@ import { DragAndDropItemService } from '../services/drag-and-drop-item.service';
 export class AppMainAreaBlockComponent implements OnInit {
 
   constructor(
-    private _addDel:AddDelArrayItemService,
-    public _getParent:GetParentElementService,
-    public _dragAndDrop:DragAndDropItemService ) { }
+    private _addDel: AddDelArrayItemService,
+    public _getParent: GetParentElementService,
+    public _dragAndDrop: DragAndDropItemService) { }
 
   ngOnInit() {
 
@@ -34,31 +34,31 @@ export class AppMainAreaBlockComponent implements OnInit {
   inputText: string = '';
   buttonText = 'Добавить';
 
-  public addToArray(inputValue: HTMLInputElement, arrayName: any[]){
+  public addToArray(inputValue: HTMLInputElement, arrayName: any[]) {
     this._addDel.add(inputValue, arrayName)
     this.inputText = '';
   }
 
-  public delFromArray(event, id: number, arrayName: any[]){
+  public delFromArray(event, id: number, arrayName: any[]) {
     if (event.ctrlKey == true) {
       this._addDel.del(id, arrayName);
     }
   }
 
-  public dragStart(event, parentSelector){
+  public dragStart(event, parentSelector) {
     let target = event.target;
     this.currentTarget = this._getParent.getParentBySelector(target, parentSelector);
     this._dragAndDrop.start(event, this.currentTarget);
   }
 
-  public dragKeep(event){
+  public dragKeep(event) {
     this._dragAndDrop.drag(event, this.currentTarget);
     if (this.currentTarget.classList.contains('moved') == false) {
       this.currentTarget.classList.add('moved');
     }
   }
 
-  hideSideBar(event){
+  hideSideBar(event) {
     this.pushHideSideBar.emit(false);
   }
 }

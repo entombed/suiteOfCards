@@ -10,6 +10,7 @@
 .text-item-block {
   display: inline-block;
   padding: 0 0.15em;
+  /* z-index: 1000; */
 }
 
 .text-item-block textarea {
@@ -21,16 +22,10 @@
 .text-item-block .header {
   border-top-left-radius: 0.25em;
   border-top-right-radius: 0.25em;  
-  height:2.25em;
+  height: 2.25em;
   background-color: #74c0ff;
 }
 
 .moved {
   position: absolute;
-}
-
-.buttonSidebar {
-  position: absolute;
-  bottom: 0;
-  left:0;
 }

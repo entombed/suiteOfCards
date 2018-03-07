@@ -19,10 +19,10 @@ import { HideShowCardsService } from '../../services/hide-show-cards.service';
 export class AppBlock01ScenariosComponent implements OnInit {
 
   constructor(
-    public _getParent:GetParentElementService,
-    public _dragAndDrop:DragAndDropItemService,
-    public _action:ActionService,
-    public _invert:HideShowCardsService ) { }
+    public _getParent: GetParentElementService,
+    public _dragAndDrop: DragAndDropItemService,
+    public _action: ActionService,
+    public _invert: HideShowCardsService) { }
 
   ngOnInit() {
     for (let i = 1; i <= this.cardCount; i++) {
@@ -36,13 +36,13 @@ export class AppBlock01ScenariosComponent implements OnInit {
   hiddenMode: boolean = false;
   titleBlock: string = 'Сценарий в действии';
 
-  public dragStart(event, parentSelector){
+  public dragStart(event, parentSelector) {
     let target = event.target;
     this.currentTarget = this._getParent.getParentBySelector(target, parentSelector);
     this._dragAndDrop.start(event, this.currentTarget);
   }
 
-  public dragKeep(event){
+  public dragKeep(event) {
     this._dragAndDrop.drag(event, this.currentTarget);
     if (this.currentTarget.classList.contains('moved') == false) {
       this.currentTarget.classList.add('moved');
@@ -60,7 +60,7 @@ export class AppBlock01ScenariosComponent implements OnInit {
     }
   }
 
-  public onDblclick(event, parentSelector){
+  public onDblclick(event, parentSelector) {
     let target = event.target;
     let currentTarget = this._getParent.getParentBySelector(target, parentSelector);
     this._action.pushToMainArea(target, currentTarget)
@@ -68,7 +68,7 @@ export class AppBlock01ScenariosComponent implements OnInit {
 
   public hideShowImage(selector, parentSelector) {
     this.hiddenMode = !this.hiddenMode;
-    let arrayCards = document.querySelectorAll( 'div.'+ selector + ' img.img-card');
+    let arrayCards = document.querySelectorAll('div.' + selector + ' img.img-card');
     this._invert.hideShow(arrayCards, this.hiddenMode, parentSelector);
   }
 

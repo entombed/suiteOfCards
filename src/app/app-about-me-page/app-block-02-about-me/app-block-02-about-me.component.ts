@@ -17,9 +17,9 @@ import { ActionService } from '../../services/action.service';
 export class AppBlock02AboutMeComponent implements OnInit {
 
   constructor(
-    public _getParent:GetParentElementService,
-    public _dragAndDrop:DragAndDropItemService,
-    public _action:ActionService ) { }
+    public _getParent: GetParentElementService,
+    public _dragAndDrop: DragAndDropItemService,
+    public _action: ActionService) { }
 
   ngOnInit() {
     for (let i = 1; i <= this.cardCount; i++) {
@@ -31,13 +31,13 @@ export class AppBlock02AboutMeComponent implements OnInit {
   titleBlock = 'Туловище';
   currentTarget;
 
-  public dragStart(event, parentSelector){
+  public dragStart(event, parentSelector) {
     let target = event.target;
     this.currentTarget = this._getParent.getParentBySelector(target, parentSelector);
     this._dragAndDrop.start(event, this.currentTarget);
   }
 
-  public dragKeep(event){
+  public dragKeep(event) {
     this._dragAndDrop.drag(event, this.currentTarget);
     if (this.currentTarget.classList.contains('moved') == false) {
       this.currentTarget.classList.add('moved');
@@ -52,7 +52,7 @@ export class AppBlock02AboutMeComponent implements OnInit {
     }
   }
 
-  public onDblclick(event, parentSelector){
+  public onDblclick(event, parentSelector) {
     let target = event.target;
     let currentTarget = this._getParent.getParentBySelector(target, parentSelector);
     this._action.pushToMainArea(target, currentTarget)

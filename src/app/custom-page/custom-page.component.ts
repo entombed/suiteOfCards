@@ -26,11 +26,11 @@ export class CustomPageComponent implements OnInit {
       status: false,
       name: 'Приказания и решения',
     },
-    scenarios:{
+    scenarios: {
       name: 'Сценарий в действии',
       status: false,
     },
-    words:{
+    words: {
       name: 'Действия',
       status: false,
     }
@@ -39,15 +39,15 @@ export class CustomPageComponent implements OnInit {
   statusCardsChoice = false;
   statusTextArea = false;
 
-  showCardsChoice(status){
+  showCardsChoice(status) {
     this.statusCardsChoice = status;
   }
 
-  showInputTextArea(status){
+  showInputTextArea(status) {
     this.statusTextArea = status;
   }
 
-  hideTextArea(event){
+  hideTextArea(event) {
     this.statusTextArea = event;
   }
 }

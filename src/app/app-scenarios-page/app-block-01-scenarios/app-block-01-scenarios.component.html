@@ -1,9 +1,10 @@
 <p-panel header="{{ titleBlock }}" [collapsed]="true" [toggleable]="true">
   <div class="ui-g">
     <button pButton type="button" class="ui-button-info" label="Перевернуть карты" (click)="hideShowImage('block-01-scenarios', 'img-block')"></button>
-  </div>  
+  </div>
   <div class="accordion-block-content block-01-scenarios">
-    <div class="img-block" *ngFor="let card of arrayCards, let id = index" pDraggable="main-area" (onDragStart)="dragStart($event, 'img-block')" (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
+    <div class="img-block" *ngFor="let card of arrayCards, let id = index" pDraggable="main-area" (onDragStart)="dragStart($event, 'img-block')"
+      (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
       <div class="img-wrapper">
         <img class="img-card" src="./assets/images/scenarios/{{ card }}">
       </div>

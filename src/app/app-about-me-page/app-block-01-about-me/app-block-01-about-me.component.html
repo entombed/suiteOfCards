@@ -1,12 +1,13 @@
 <p-panel header="{{ titleBlock }}" [collapsed]="true" [toggleable]="true">
-  <div class="accordion-block-content head">
-      <div [ngClass]='"img-block"' *ngFor="let card of arrayCards, let id = index" pDraggable="carszone" (onDragStart)="dragStart($event, 'img-block')" (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
-          <div class="img-wrapper">
-            <img [ngClass]='"img-card"' src="./assets/images/about-me/head/{{ card }}"/>
-          </div>
-          <div class="card-number">
-              {{id + 1}}
-          </div>
-      </div>
-  </div>
+    <div class="accordion-block-content head">
+        <div [ngClass]='"img-block"' *ngFor="let card of arrayCards, let id = index" pDraggable="carszone" (onDragStart)="dragStart($event, 'img-block')"
+            (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">
+            <div class="img-wrapper">
+                <img [ngClass]='"img-card"' src="./assets/images/about-me/head/{{ card }}" />
+            </div>
+            <div class="card-number">
+                {{id + 1}}
+            </div>
+        </div>
+    </div>
 </p-panel>

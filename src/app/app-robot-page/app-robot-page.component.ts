@@ -12,12 +12,12 @@ export class AppRobotPageComponent implements OnInit {
   ngOnInit() {
   }
   statusTextArea = false;
-  
-  showInputTextArea(status){
+
+  showInputTextArea(status) {
     this.statusTextArea = status;
   }
 
-  hideSideBar(event){
+  hideSideBar(event) {
     this.statusTextArea = event;
   }
 }

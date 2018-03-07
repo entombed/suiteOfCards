@@ -4,7 +4,7 @@ import { SetZindexItemService } from './set-zindex-item.service';
 @Injectable()
 export class DragAndDropItemService {
 
-  constructor( public _zindex: SetZindexItemService ) { }
+  constructor(public _zindex: SetZindexItemService) { }
   areaSize = {
     offsetTop: null,
     height: null,

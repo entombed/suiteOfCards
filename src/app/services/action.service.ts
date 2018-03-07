@@ -4,14 +4,14 @@ import { SetZindexItemService } from './set-zindex-item.service';
 @Injectable()
 export class ActionService {
 
-  constructor( public _zindex: SetZindexItemService ) { }
+  constructor(public _zindex: SetZindexItemService) { }
 
   pushToDeck(currentTarget) {
     currentTarget.classList.remove('moved');
     currentTarget.removeAttribute('style');
   }
 
-  pushToMainArea(target, currentTarget){
+  pushToMainArea(target, currentTarget) {
     let area = document.querySelector('body');
     let box = target.getBoundingClientRect();
     currentTarget.classList.add('moved');
@@ -20,7 +20,7 @@ export class ActionService {
     this._zindex.addIndex(currentTarget);
   }
 
-  invertCard(target){
+  invertCard(target) {
     let cardHiddenStatus = target.classList.contains('img-card-hidden');
     if (cardHiddenStatus) {
       target.classList.remove('img-card-hidden');

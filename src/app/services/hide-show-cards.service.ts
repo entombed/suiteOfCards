@@ -4,7 +4,7 @@ import { GetParentElementService } from './get-parent-element.service'
 @Injectable()
 export class HideShowCardsService {
 
-  constructor( public _getParent:GetParentElementService ) { }
+  constructor(public _getParent: GetParentElementService) { }
 
   hideShow(arrayCards, status, parentSelector) {
     for (let i = 0; i < arrayCards.length; i++) {

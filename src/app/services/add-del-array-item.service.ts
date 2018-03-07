@@ -6,14 +6,14 @@ export class AddDelArrayItemService {
   constructor() { }
 
   inputText: string;
-  
-  add(inputValue, arrayName){
+
+  add(inputValue, arrayName) {
     if (inputValue) {
       arrayName.push(inputValue);
     }
   }
 
-  del(id, arrayName){
+  del(id, arrayName) {
     arrayName.splice(id, 1);
   }
 }
