@@ -9,6 +9,7 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {SidebarModule} from 'primeng/sidebar';
 import {CheckboxModule} from 'primeng/checkbox';
+import {ToolbarModule} from 'primeng/toolbar';
 
 import { AppComponent } from './app.component';
 import { SetZindexItemService } from './services/set-zindex-item.service';
@@ -74,7 +75,8 @@ const appRoutes: Routes =[
     ButtonModule,
     InputTextareaModule,
     SidebarModule,
-    CheckboxModule
+    CheckboxModule,
+    ToolbarModule
   ],
   providers: [ 
     SetZindexItemService 
