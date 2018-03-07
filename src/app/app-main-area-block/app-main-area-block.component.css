@@ -7,22 +7,21 @@
   position: relative;
 }
 
-.text-area {
+.text-item-block {
   display: inline-block;
-  padding: 0.15em;
-  z-index: 1000;
+  padding: 0 0.15em;
 }
 
-.text-area textarea {
+.text-item-block textarea {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   min-width: 15em;
 }
 
-.text-area .header {
+.text-item-block .header {
   border-top-left-radius: 0.25em;
   border-top-right-radius: 0.25em;  
-  height:1.5em;
+  height:2.25em;
   background-color: #74c0ff;
 }
 
