@@ -24,7 +24,7 @@ export class CustomPageComponent implements OnInit {
     },
     cadDeck: {
       status: false,
-      name: 'Приказание и действие',
+      name: 'Приказания и решения',
     },
     scenarios:{
       name: 'Сценарий в действии',
