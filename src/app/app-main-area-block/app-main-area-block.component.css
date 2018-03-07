@@ -10,7 +10,6 @@
 .text-item-block {
   display: inline-block;
   padding: 0 0.15em;
-  /* z-index: 1000; */
 }
 
 .text-item-block textarea {
