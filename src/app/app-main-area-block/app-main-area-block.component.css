@@ -20,6 +20,7 @@
 .text-item-block:active textarea {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
 }
+
 .text-item-block textarea {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -28,7 +29,7 @@
 
 .text-item-block .header {
   border-top-left-radius: 0.25em;
-  border-top-right-radius: 0.25em;  
+  border-top-right-radius: 0.25em;
   height: 2.25em;
   background-color: #74c0ff;
 }
