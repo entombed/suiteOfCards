@@ -1,10 +1,8 @@
 .main-area {
-  margin: 0.5em;
   border-color: #adadad;
   border-style: solid;
   border-width: 1px;
   height: 90vh;
-  position: relative;
 }
 
 .text-item-block {
@@ -12,6 +10,16 @@
   padding: 0 0.15em;
 }
 
+.text-item-block:hover .header,
+.text-item-block:active .header  {
+  background-color: #4aaeff;
+  cursor: pointer;
+}
+
+.text-item-block:hover textarea,
+.text-item-block:active textarea {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
+}
 .text-item-block textarea {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -23,8 +31,4 @@
   border-top-right-radius: 0.25em;  
   height: 2.25em;
   background-color: #74c0ff;
-}
-
-.moved {
-  position: absolute;
 }
