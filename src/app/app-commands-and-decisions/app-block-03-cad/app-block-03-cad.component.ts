@@ -3,6 +3,7 @@ import { GetParentElementService } from '../../services/get-parent-element.servi
 import { DragAndDropItemService } from '../../services/drag-and-drop-item.service';
 import { ActionService } from '../../services/action.service';
 import { HideShowCardsService } from '../../services/hide-show-cards.service';
+import { ShuffleService } from '../../services/shuffle.service';
 
 @Component({
   selector: 'app-block-03-cad',
@@ -13,7 +14,8 @@ import { HideShowCardsService } from '../../services/hide-show-cards.service';
     GetParentElementService,
     ActionService,
     DragAndDropItemService,
-    HideShowCardsService
+    HideShowCardsService,
+    ShuffleService
   ]
 })
 export class AppBlock03CadComponent implements OnInit {
@@ -22,12 +24,15 @@ export class AppBlock03CadComponent implements OnInit {
     public _getParent: GetParentElementService,
     public _dragAndDrop: DragAndDropItemService,
     public _action: ActionService,
-    public _invert: HideShowCardsService) { }
+    public _invert: HideShowCardsService,
+    public _shuffle: ShuffleService) { }
 
   ngOnInit() {
+    let tmpArray = [];
     for (let i = 1; i <= this.cardCount; i++) {
-      this.arrayCards.push(i + '.jpg');
+      tmpArray.push(i + '.jpg');
     }
+    this.arrayCards = this._shuffle.mixIt(tmpArray);
   }
 
   cardCount: number = 53;
@@ -70,5 +75,9 @@ export class AppBlock03CadComponent implements OnInit {
     this.hiddenMode = !this.hiddenMode;
     let arrayCards = document.querySelectorAll('div.' + selector + ' img.img-card');
     this._invert.hideShow(arrayCards, this.hiddenMode, parentSelector);
+  }
+
+  public resortDeck(array){
+    this.arrayCards = this._shuffle.mixIt(array);
   }
 }
