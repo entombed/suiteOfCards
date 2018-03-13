@@ -1,4 +1,4 @@
-<p-panel header="{{ titleBlock }}" [collapsed]="true" [toggleable]="true">
+<p-panel header="{{ titleBlock }}" [collapsed]="true" [toggleable]="true" expandIcon="fa-plus-square-o fa-2x" collapseIcon="fa-minus-square-o fa-2x">
   <div class="accordion-block-content middle">
     <div [ngClass]='"img-block"' *ngFor="let card of arrayBodys, let id = index" pDraggable="carszone" (onDragStart)="dragStart($event, 'img-block')"
       (onDrag)="dragKeep($event, 'img-block')" (click)="onClick($event, 'img-block')" (dblclick)="onDblclick($event, 'img-block')">

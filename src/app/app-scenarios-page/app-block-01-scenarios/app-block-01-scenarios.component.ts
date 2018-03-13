@@ -28,11 +28,16 @@ export class AppBlock01ScenariosComponent implements OnInit {
     public _shuffle: ShuffleService) { }
 
   ngOnInit() {
-    let tmpArray = [];
-    for (let i = 1; i <= this.cardCount; i++) {
-      tmpArray.push(i + '.png');
-    }
-    this.arrayCards = this._shuffle.mixIt(tmpArray);
+    // setTimeout(() => {
+    //   for (let i = 1; i <= this.cardCount; i++) {
+    //     this.arrayCards.push(i + '.png');
+    //   }
+    //   this.arrayCards = this._shuffle.mixIt(this.arrayCards);
+    // }, 500)
+      for (let i = 1; i <= this.cardCount; i++) {
+        this.arrayCards.push(i + '.png');
+      }
+      this.arrayCards = this._shuffle.mixIt(this.arrayCards);
   }
 
   cardCount: number = 50;
