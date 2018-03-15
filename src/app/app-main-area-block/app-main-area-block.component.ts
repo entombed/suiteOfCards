@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
 import { AddDelArrayItemService } from '../services/add-del-array-item.service';
 import { GetParentElementService } from '../services/get-parent-element.service';
 import { DragAndDropItemService } from '../services/drag-and-drop-item.service';
+import { ActionService } from '../services/action.service';
 
 @Component({
   selector: 'app-main-area-block',
@@ -10,7 +11,8 @@ import { DragAndDropItemService } from '../services/drag-and-drop-item.service';
   providers: [
     AddDelArrayItemService,
     GetParentElementService,
-    DragAndDropItemService
+    DragAndDropItemService,
+    ActionService
   ],
   encapsulation: ViewEncapsulation.Emulated
 })
@@ -19,7 +21,8 @@ export class AppMainAreaBlockComponent implements OnInit {
   constructor(
     private _addDel: AddDelArrayItemService,
     public _getParent: GetParentElementService,
-    public _dragAndDrop: DragAndDropItemService) { }
+    public _dragAndDrop: DragAndDropItemService,
+    public _action: ActionService) { }
 
   ngOnInit() {
 
@@ -33,6 +36,7 @@ export class AppMainAreaBlockComponent implements OnInit {
   inputArray: string[] = [];
   inputText: string = '';
   buttonText = 'Добавить';
+  locked: boolean = false;
 
   public addToArray(inputValue: HTMLInputElement, arrayName: any[]) {
     this._addDel.add(inputValue, arrayName)
@@ -46,6 +50,7 @@ export class AppMainAreaBlockComponent implements OnInit {
   }
 
   public dragStart(event, parentSelector) {
+    this.locked = true;
     let target = event.target;
     this.currentTarget = this._getParent.getParentBySelector(target, parentSelector);
     this._dragAndDrop.start(event, this.currentTarget);
@@ -53,12 +58,15 @@ export class AppMainAreaBlockComponent implements OnInit {
 
   public dragKeep(event) {
     this._dragAndDrop.drag(event, this.currentTarget);
-    if (this.currentTarget.classList.contains('moved') == false) {
-      this.currentTarget.classList.add('moved');
-    }
   }
 
   hideSideBar(event) {
     this.pushHideSideBar.emit(false);
+  }
+
+  public onDblclick(event, parentSelector) {
+    let target = event.target;
+    let currentTarget = this._getParent.getParentBySelector(target, parentSelector);
+    this._action.pushToMainArea(target, currentTarget)
   }
 }
