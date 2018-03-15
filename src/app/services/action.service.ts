@@ -18,6 +18,7 @@ export class ActionService {
     currentTarget.style.left = area.clientWidth / 2 - box.width / 2 + 'px';
     currentTarget.style.top = '10vh';
     this._zindex.addIndex(currentTarget);
+    
   }
 
   invertCard(target) {

@@ -53,6 +53,9 @@ export class DragAndDropItemService {
   }
 
   drag(event, target) {
+    if (target.classList.contains('moved') == false) {
+      target.classList.add('moved');
+    }
     this.getCurrentPosition(event);
     this.setStylePositionAttribyte(target);
   }
