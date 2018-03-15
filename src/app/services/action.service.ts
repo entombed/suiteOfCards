@@ -14,11 +14,33 @@ export class ActionService {
   pushToMainArea(target, currentTarget) {
     let area = document.querySelector('body');
     let box = target.getBoundingClientRect();
-    currentTarget.classList.add('moved');
-    currentTarget.style.left = area.clientWidth / 2 - box.width / 2 + 'px';
-    currentTarget.style.top = '10vh';
+
+    let targetProperties = {
+      X: box.left + pageXOffset,
+      Y: box.top + pageYOffset,
+      height: box.height,
+      width: box.width
+    };
+
+    let areaSize = {
+      offsetTop: area.offsetTop,
+      height: area.clientHeight + area.offsetTop,
+      width: area.clientWidth
+    };
+
     this._zindex.addIndex(currentTarget);
-    
+
+    currentTarget.classList.add('moved');
+
+    currentTarget.style.left = targetProperties.X + 'px';
+    currentTarget.style.top = targetProperties.Y + 'px';
+    box = target.getBoundingClientRect();
+    targetProperties.width = box.width;
+    setTimeout(() => {
+      currentTarget.style.left = areaSize.width / 2 - targetProperties.width / 2 + 'px';
+      currentTarget.style.top = '10vh';
+    }, 150)
+
   }
 
   invertCard(target) {
