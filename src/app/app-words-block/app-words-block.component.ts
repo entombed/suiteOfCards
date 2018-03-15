@@ -48,9 +48,6 @@ export class AppWordsBlockComponent implements OnInit {
 
   public dragKeep(event) {
     this._dragAndDrop.drag(event, this.currentTarget);
-    if (this.currentTarget.classList.contains('moved') == false) {
-      this.currentTarget.classList.add('moved');
-    }
   }
 
   public onClick(event, parentSelector) {
