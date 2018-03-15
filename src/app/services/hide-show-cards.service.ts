@@ -12,11 +12,7 @@ export class HideShowCardsService {
       if (parent.classList.contains('moved')) {
         continue;
       } else {
-        if (status) {
-          arrayCards[i].classList.add('img-card-hidden');
-        } else {
-          arrayCards[i].classList.remove('img-card-hidden');
-        }
+        arrayCards[i].classList.toggle('img-card-hidden', status);
       }
     }
   }
