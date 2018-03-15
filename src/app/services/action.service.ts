@@ -30,16 +30,18 @@ export class ActionService {
 
     this._zindex.addIndex(currentTarget);
 
-    currentTarget.classList.add('moved');
+    if (currentTarget.classList.contains('moved') === false) {
+      currentTarget.classList.add('moved');
+      currentTarget.style.top = targetProperties.Y + 'px';
+      box = target.getBoundingClientRect();
+      targetProperties.width = box.width;
+      currentTarget.style.left = targetProperties.X - (targetProperties.width / 2) / 2 + 'px';
+    }
 
-    currentTarget.style.left = targetProperties.X + 'px';
-    currentTarget.style.top = targetProperties.Y + 'px';
-    box = target.getBoundingClientRect();
-    targetProperties.width = box.width;
     setTimeout(() => {
       currentTarget.style.left = areaSize.width / 2 - targetProperties.width / 2 + 'px';
       currentTarget.style.top = '10vh';
-    }, 150)
+    }, 180)
 
   }
 
