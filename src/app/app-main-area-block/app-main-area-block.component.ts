@@ -25,7 +25,7 @@ export class AppMainAreaBlockComponent implements OnInit {
     public _action: ActionService) { }
 
   ngOnInit() {
-
+    
   }
 
   @Input() pullShowSidebar;
@@ -41,9 +41,10 @@ export class AppMainAreaBlockComponent implements OnInit {
   locked: boolean = false;
 
   public addToArray() {
-    let inputtext = this.inputField.nativeElement.value)
-    this._addDel.add(inputtext, this.inputArray)
+    let inputText = this.inputField.nativeElement.value;
+    this._addDel.add(inputText, this.inputArray)
     this.inputText = '';
+    this.inputField.nativeElement.focus();
   }
 
   public delFromArray(event, id: number) {
