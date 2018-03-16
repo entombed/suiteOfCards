@@ -73,4 +73,8 @@ export class AppMainAreaBlockComponent implements OnInit {
     let currentTarget = this._getParent.getParentBySelector(target, parentSelector);
     this._action.pushToMainArea(target, currentTarget)
   }
+
+  focus(){
+    this.inputField.nativeElement.focus();
+  }
 }
