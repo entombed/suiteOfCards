@@ -56,10 +56,7 @@
 .moved {
     position: absolute;
     transition-duration: 0.2s;
-    /* transition-timing-function: cubic-bezier(.65, 1.95, .03, .32); */
-    /* transition-timing-function: cubic-bezier(.22, .81, .03, .32); */
-    /* transition-timing-function: cubic-bezier(.44, .60, .53, 1.50); */
-    transition-timing-function: cubic-bezier(.41,.28,.57,1.28);
+    transition-timing-function: cubic-bezier(.65, 1.95, .03, .32);
 }
 
 .img-block.moved .img-wrapper,
