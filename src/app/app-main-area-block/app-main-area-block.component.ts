@@ -44,7 +44,7 @@ export class AppMainAreaBlockComponent implements OnInit {
     let inputText = this.inputField.nativeElement.value;
     this._addDel.add(inputText, this.inputArray)
     this.inputText = '';
-    this.inputField.nativeElement.focus();
+    this.focus();
   }
 
   public delFromArray(event, id: number) {
