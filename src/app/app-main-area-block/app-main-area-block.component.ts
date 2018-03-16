@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { AddDelArrayItemService } from '../services/add-del-array-item.service';
 import { GetParentElementService } from '../services/get-parent-element.service';
 import { DragAndDropItemService } from '../services/drag-and-drop-item.service';
@@ -32,20 +32,23 @@ export class AppMainAreaBlockComponent implements OnInit {
 
   @Output() pushHideSideBar = new EventEmitter<boolean>();
 
+  @ViewChild('inputRef') inputField: ElementRef;
+
   currentTarget;
   inputArray: string[] = [];
   inputText: string = '';
   buttonText = 'Добавить';
   locked: boolean = false;
 
-  public addToArray(inputValue: HTMLInputElement, arrayName: any[]) {
-    this._addDel.add(inputValue, arrayName)
+  public addToArray() {
+    let inputtext = this.inputField.nativeElement.value)
+    this._addDel.add(inputtext, this.inputArray)
     this.inputText = '';
   }
 
-  public delFromArray(event, id: number, arrayName: any[]) {
+  public delFromArray(event, id: number) {
     if (event.ctrlKey == true) {
-      this._addDel.del(id, arrayName);
+      this._addDel.del(id, this.inputArray);
     }
   }
 
