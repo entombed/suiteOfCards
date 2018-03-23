@@ -1,31 +1,10 @@
-<!-- <p-sidebar [(visible)]="statusCardsChoice">
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.robotDeck.status" binary="true" label="{{cardDecks.robotDeck.name}}" onChange="change()"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.aboutMeDeck.status" binary="true" label="{{cardDecks.aboutMeDeck.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.cadDeck.status" binary="true" label="{{cardDecks.cadDeck.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.scenarios.status" binary="true" label="{{cardDecks.scenarios.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <p-checkbox [(ngModel)]="cardDecks.words.status" binary="true" label="{{cardDecks.words.name}}"></p-checkbox>
-  </div>
-  <div class="ui-g-12">
-    <button pButton type="button" (click)="showCardsChoice(false)" label="Закрыть панель" icon="fa-close" iconPos="right" [ngStyle]="{'width':'100%'}"></button>
-  </div>
-</p-sidebar> -->
 <app-menu-custom-page #RefMenuBlock [inCardDecks]="cardDecks"></app-menu-custom-page>
-<app-main-area-block #RefInputBlock ></app-main-area-block>
+<app-main-area-block #RefInputBlock></app-main-area-block>
 
 <div class="ui-g">
   <div class="ui-g-12">
     <p-toolbar>
       <div class="ui-toolbar-group-left">
-        <!-- <button pButton type="button" (click)="showCardsChoice(true)" label="Открыть панель выбора колод" class="ui-button-success"></button> -->
         <button pButton type="button" (click)="RefMenuBlock.show()" label="Открыть панель выбора колод" class="ui-button-success"></button>
         <button pButton type="button" (click)="RefInputBlock.show()" label="Открыть панель ввода слов" class="ui-button-success"></button>
       </div>

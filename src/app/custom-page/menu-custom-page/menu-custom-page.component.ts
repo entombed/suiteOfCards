@@ -12,10 +12,11 @@ export class MenuCustomPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() inCardDecks; 
+  @Input() inCardDecks;
+
   display: boolean = false;
 
-  show(){
+  show() {
     this.display = true;
   }
 }
