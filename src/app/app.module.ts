@@ -31,6 +31,7 @@ import { AppBlock03CadComponent } from './app-commands-and-decisions/app-block-0
 import { AppScenariosPageComponent } from './app-scenarios-page/app-scenarios-page.component';
 import { AppBlock01ScenariosComponent } from './app-scenarios-page/app-block-01-scenarios/app-block-01-scenarios.component';
 import { CustomPageComponent } from './custom-page/custom-page.component';
+import { MenuCustomPageComponent } from './custom-page/menu-custom-page/menu-custom-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppMainPageComponent },
@@ -63,7 +64,8 @@ const appRoutes: Routes = [
     AppBlock03CadComponent,
     AppScenariosPageComponent,
     AppBlock01ScenariosComponent,
-    CustomPageComponent
+    CustomPageComponent,
+    MenuCustomPageComponent
   ],
   imports: [
     BrowserModule,

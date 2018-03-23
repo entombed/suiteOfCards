@@ -36,18 +36,4 @@ export class CustomPageComponent implements OnInit {
     }
   }
 
-  statusCardsChoice = false;
-  statusTextArea = false;
-
-  showCardsChoice(status) {
-    this.statusCardsChoice = status;
-  }
-
-  showInputTextArea(status) {
-    this.statusTextArea = status;
-  }
-
-  hideTextArea(event) {
-    this.statusTextArea = event;
-  }
 }

@@ -1,0 +1,20 @@
+<p-sidebar [(visible)]="display">
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="inCardDecks.robotDeck.status" binary="true" label="{{inCardDecks.robotDeck.name}}"></p-checkbox>
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="inCardDecks.aboutMeDeck.status" binary="true" label="{{inCardDecks.aboutMeDeck.name}}"></p-checkbox>
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="inCardDecks.cadDeck.status" binary="true" label="{{inCardDecks.cadDeck.name}}"></p-checkbox>
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="inCardDecks.scenarios.status" binary="true" label="{{inCardDecks.scenarios.name}}"></p-checkbox>
+  </div>
+  <div class="ui-g-12">
+    <p-checkbox [(ngModel)]="inCardDecks.words.status" binary="true" label="{{inCardDecks.words.name}}"></p-checkbox>
+  </div>
+  <div class="ui-g-12">
+    <button pButton type="button" (click)="display = false" label="Закрыть панель" icon="fa-close" iconPos="right" [ngStyle]="{'width':'100%'}"></button>
+  </div>
+</p-sidebar>
