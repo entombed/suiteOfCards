@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<p-sidebar [(visible)]="pullShowSidebar" (onHide)="hideSideBar(false)" (onShow)="focus()" position="bottom" [baseZIndex]="1000">
+<p-sidebar [(visible)]="display" (onShow)="focus()" position="bottom" [baseZIndex]="1000">
   <div class="ui-g-offset-2 ui-g-8">
     <div class="ui-inputgroup">
       <input #inputRef class="ui-inputtex ui-g-10" type="text" pInputText (keyup.enter)="addToArray()"

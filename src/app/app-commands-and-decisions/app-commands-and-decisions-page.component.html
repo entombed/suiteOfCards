@@ -1,9 +1,9 @@
-<app-main-area-block [pullShowSidebar]="statusTextArea" (pushHideSideBar)="hideSideBar($event)"></app-main-area-block>
+<app-main-area-block #inputBlock></app-main-area-block>
 <div class="ui-g">
     <div class="ui-g-12">
         <p-toolbar>
             <div class="ui-toolbar-group-left">
-                <button pButton type="button" (click)="showInputTextArea(true)" label="Открыть панель ввода слова" class="ui-button-success"></button>
+                <button pButton type="button" (click)="inputBlock.show()" label="Открыть панель ввода слова" class="ui-button-success"></button>
             </div>
         </p-toolbar>
     </div>

@@ -28,13 +28,14 @@ export class AppMainAreaBlockComponent implements OnInit {
     
   }
 
-  @Input() pullShowSidebar;
+  // @Input() pullShowSidebar;
 
-  @Output() pushHideSideBar = new EventEmitter<boolean>();
+  // @Output() pushHideSideBar = new EventEmitter<boolean>();
 
   @ViewChild('inputRef') inputField: ElementRef;
 
   currentTarget;
+  display: boolean = false;
   inputArray: string[] = [];
   inputText: string = '';
   buttonText = 'Добавить';
@@ -64,9 +65,9 @@ export class AppMainAreaBlockComponent implements OnInit {
     this._dragAndDrop.drag(event, this.currentTarget);
   }
 
-  hideSideBar(event) {
-    this.pushHideSideBar.emit(false);
-  }
+  // hideSideBar(event) {
+  //   this.pushHideSideBar.emit(false);
+  // }
 
   public onDblclick(event, parentSelector) {
     let target = event.target;
@@ -76,5 +77,9 @@ export class AppMainAreaBlockComponent implements OnInit {
 
   focus(){
     this.inputField.nativeElement.focus();
+  }
+
+  show(){
+    this.display = true;
   }
 }
