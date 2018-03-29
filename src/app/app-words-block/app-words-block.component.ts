@@ -22,15 +22,16 @@ export class AppWordsBlockComponent implements OnInit {
     public _action: ActionService) { }
 
   ngOnInit() {
-    let word: string;
-    for (let i = 0; i < this.arrayWords.length; i++) {
-      let firstLetter: string = this.arrayWords[i][0];
-      if (firstLetter !== firstLetter.toUpperCase()) {
-        word = firstLetter.toUpperCase() + this.arrayWords[i].slice(1);
-        this.arrayWords[i] = word;
-      }
-    }
-    this.arrayWords = this.arrayWords.sort();
+    // let word: string;
+    // for (let i = 0; i < this.arrayWords.length; i++) {
+    //   let firstLetter: string = this.arrayWords[i][0];
+    //   if (firstLetter !== firstLetter.toUpperCase()) {
+    //     word = firstLetter.toUpperCase() + this.arrayWords[i].slice(1);
+    //     this.arrayWords[i] = word;
+    //   }
+    // }
+    this.arrayWords = this.arrayWords.map(this.checkCase).sort()
+    // this.arrayWords = this.arrayWords.sort();
   }
 
   arrayWords = [
@@ -39,6 +40,14 @@ export class AppWordsBlockComponent implements OnInit {
 
   titleWord: string = 'Действия';
   currentTarget;
+
+  checkCase(item){
+    if (typeof(item) !== 'string') { 
+      return item;
+    }
+    item = item[0] === item[0].toUpperCase() ? item : item.slice(0,1).toUpperCase() + item.slice(1);
+    return item;
+  }
 
   public dragStart(event, parentSelector) {
     let target = event.target;
