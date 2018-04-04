@@ -41,8 +41,8 @@ export class DragAndDropItemService {
     };
 
     this.areaSize = {
-      offsetTop: area.top,
-      offsetLeft: area.left,
+      offsetTop: -(area.top),
+      offsetLeft: -(area.left),
       height: area.height,
       width: area.width
     };
