@@ -27,7 +27,7 @@ export class DragAndDropItemService {
   currentObjPosY: number = null;
 
   start(event, target) {
-    let area = <HTMLElement>document.querySelector('body');
+    let area = <HTMLElement>document.querySelector('.main-area');
     let box = event.target.getBoundingClientRect();
     this._zindex.addIndex(target);
 
