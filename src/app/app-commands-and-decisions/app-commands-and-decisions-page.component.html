@@ -1,9 +1,10 @@
-<app-main-area-block #inputBlock></app-main-area-block>
+<app-main-area-block #RefMainAreaBlock></app-main-area-block>
 <div class="ui-g">
     <div class="ui-g-12">
         <p-toolbar>
             <div class="ui-toolbar-group-left">
-                <button pButton type="button" (click)="inputBlock.show()" label="Открыть панель ввода слова" class="ui-button-success"></button>
+                <button pButton type="button" (click)="RefMainAreaBlock.show()" label="Открыть панель ввода слова" class="ui-button-success"></button>
+                <button pButton type="button" (click)="RefMainAreaBlock.showResizeMenu()" label="Изменить размер" class="ui-button-success"></button>
             </div>
         </p-toolbar>
     </div>
