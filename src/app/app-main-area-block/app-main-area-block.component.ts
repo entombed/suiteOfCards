@@ -26,7 +26,7 @@ export class AppMainAreaBlockComponent implements OnInit {
     public _action: ActionService) { }
 
   ngOnInit() {
-    
+
   }
 
   @ViewChild('inputRef') inputField: ElementRef;
@@ -41,7 +41,7 @@ export class AppMainAreaBlockComponent implements OnInit {
   areaProperties = {
     height: '',
     width: '',
-    step: 200
+    step: 400
   }
 
   public addToArray() {

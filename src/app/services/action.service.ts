@@ -12,7 +12,7 @@ export class ActionService {
   }
 
   pushToMainArea(target, currentTarget) {
-    let area = document.querySelector('body');
+    let area = <HTMLElement>document.querySelector('body');
     let box = target.getBoundingClientRect();
 
     let targetProperties = {
