@@ -3,6 +3,7 @@ import { AddDelArrayItemService } from '../services/add-del-array-item.service';
 import { GetParentElementService } from '../services/get-parent-element.service';
 import { DragAndDropItemService } from '../services/drag-and-drop-item.service';
 import { ActionService } from '../services/action.service';
+import { MenuResizeAreaComponent } from '../menu-resize-area/menu-resize-area.component';
 
 @Component({
   selector: 'app-main-area-block',
@@ -28,11 +29,8 @@ export class AppMainAreaBlockComponent implements OnInit {
     
   }
 
-  // @Input() pullShowSidebar;
-
-  // @Output() pushHideSideBar = new EventEmitter<boolean>();
-
   @ViewChild('inputRef') inputField: ElementRef;
+  @ViewChild(MenuResizeAreaComponent) private menuResizeComponent: MenuResizeAreaComponent;
 
   currentTarget;
   display: boolean = false;
@@ -40,6 +38,11 @@ export class AppMainAreaBlockComponent implements OnInit {
   inputText: string = '';
   buttonText = 'Добавить';
   locked: boolean = false;
+  areaProperties = {
+    height: '',
+    width: '',
+    step: 200
+  }
 
   public addToArray() {
     let inputText = this.inputField.nativeElement.value;
@@ -65,10 +68,6 @@ export class AppMainAreaBlockComponent implements OnInit {
     this._dragAndDrop.drag(event, this.currentTarget);
   }
 
-  // hideSideBar(event) {
-  //   this.pushHideSideBar.emit(false);
-  // }
-
   public onDblclick(event, parentSelector) {
     let target = event.target;
     let currentTarget = this._getParent.getParentBySelector(target, parentSelector);
@@ -81,5 +80,9 @@ export class AppMainAreaBlockComponent implements OnInit {
 
   show(){
     this.display = true;
+  }
+
+  showResizeMenu(){
+    this.menuResizeComponent.show();
   }
 }

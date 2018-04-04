@@ -1,12 +1,14 @@
-<app-menu-custom-page #RefMenuBlock [inCardDecks]="cardDecks"></app-menu-custom-page>
-<app-main-area-block #RefInputBlock></app-main-area-block>
+<app-menu-custom-page #RefMenuDeckBlock [inCardDecks]="cardDecks"></app-menu-custom-page>
+<app-main-area-block #RefMainAreaBlock></app-main-area-block>
+<!-- <app-menu-resize-area #RefMenuResizeArea></app-menu-resize-area> -->
 
 <div class="ui-g">
   <div class="ui-g-12">
     <p-toolbar>
       <div class="ui-toolbar-group-left">
-        <button pButton type="button" (click)="RefMenuBlock.show()" label="Открыть панель выбора колод" class="ui-button-success"></button>
-        <button pButton type="button" (click)="RefInputBlock.show()" label="Открыть панель ввода слов" class="ui-button-success"></button>
+        <button pButton type="button" (click)="RefMenuDeckBlock.show()" label="Открыть панель выбора колод" class="ui-button-success"></button>
+        <button pButton type="button" (click)="RefMainAreaBlock.show()" label="Открыть панель ввода слов" class="ui-button-success"></button>
+        <button pButton type="button" (click)="RefMainAreaBlock.showResizeMenu()" label="Изменить размер" class="ui-button-success"></button>
       </div>
     </p-toolbar>
   </div>

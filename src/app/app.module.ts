@@ -32,6 +32,7 @@ import { AppScenariosPageComponent } from './app-scenarios-page/app-scenarios-pa
 import { AppBlock01ScenariosComponent } from './app-scenarios-page/app-block-01-scenarios/app-block-01-scenarios.component';
 import { CustomPageComponent } from './custom-page/custom-page.component';
 import { MenuCustomPageComponent } from './custom-page/menu-custom-page/menu-custom-page.component';
+import { MenuResizeAreaComponent } from './menu-resize-area/menu-resize-area.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppMainPageComponent },
@@ -65,7 +66,8 @@ const appRoutes: Routes = [
     AppScenariosPageComponent,
     AppBlock01ScenariosComponent,
     CustomPageComponent,
-    MenuCustomPageComponent
+    MenuCustomPageComponent,
+    MenuResizeAreaComponent
   ],
   imports: [
     BrowserModule,

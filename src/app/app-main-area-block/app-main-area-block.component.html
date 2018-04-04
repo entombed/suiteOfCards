@@ -1,4 +1,4 @@
-<div class="main-area">
+<div [ngStyle]="{'height': areaProperties.height, 'width': areaProperties.width}" class="main-area">
   <div class="ui-g-12" *ngIf="inputArray.length">
     <div [ngStyle]="{'z-index':1000}" class="text-item-block" *ngFor="let item of inputArray; let id = index">
       <div class="header" pDraggable="main-area" (onDragStart)="dragStart($event, 'text-item-block')"
@@ -17,3 +17,5 @@
     </div>
   </div>
 </p-sidebar>
+
+<app-menu-resize-area [inAreaProperties]="areaProperties"></app-menu-resize-area>
