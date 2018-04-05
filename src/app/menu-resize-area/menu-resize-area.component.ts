@@ -12,7 +12,7 @@ export class MenuResizeAreaComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input()  inAreaProperties;
+  @Input() inAreaProperties;
   display: boolean = false;
   // bodyArea;
 
@@ -21,7 +21,7 @@ export class MenuResizeAreaComponent implements OnInit {
     // this.checkSizeArea();
   }
 
-  checkSizeArea(){
+  checkSizeArea() {
     let mainArea;
     // this.bodyArea = document.querySelector('body')
     mainArea = document.querySelector('.main-area').getBoundingClientRect();
@@ -29,8 +29,8 @@ export class MenuResizeAreaComponent implements OnInit {
     this.inAreaProperties.width = mainArea.width;
   }
 
-  reset(data){
-    switch(data){
+  reset(data) {
+    switch (data) {
       case 'width':
         this.inAreaProperties.width = '';
         // this.bodyArea.style.width = '';
@@ -41,13 +41,13 @@ export class MenuResizeAreaComponent implements OnInit {
     }
   }
 
-  changeWidth(action){
+  changeWidth(action) {
     this.checkSizeArea();
     // this.bodyArea.style.width = action == 'add' ? this.bodyArea.clientWidth + this.inAreaProperties.step + 'px' : this.bodyArea.clientWidth - this.inAreaProperties.step + 'px';
     this.inAreaProperties.width = action == 'increase' ? this.inAreaProperties.width + this.inAreaProperties.step + 'px' : this.inAreaProperties.width - this.inAreaProperties.step + 'px';
   }
 
-  changeHeight(action){
+  changeHeight(action) {
     this.checkSizeArea();
     this.inAreaProperties.height = action == 'increase' ? this.inAreaProperties.height + this.inAreaProperties.step + 'px' : this.inAreaProperties.height - this.inAreaProperties.step + 'px';
   }
