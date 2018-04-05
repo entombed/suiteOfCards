@@ -1,15 +1,15 @@
 <p-sidebar [(visible)]="display">
   <div class="ui-g-12">
     <h4>Ширина</h4>
-    <p-button icon="fa fa-plus" iconPos="right" (click)="changeWidth('add')"></p-button>
-    <p-button icon="fa fa-minus" iconPos="right" (click)="changeWidth('rem')"></p-button>
-    <p-button icon="fa fa-check" iconPos="right"(click)="reset('width')"></p-button>
+    <p-button icon="fa fa-plus" iconPos="right" (click)="changeWidth('increase')"></p-button>
+    <p-button icon="fa fa-minus" iconPos="right" (click)="changeWidth('decrease')"></p-button>
+    <p-button icon="fa fa-undo" iconPos="right"(click)="reset('width')"></p-button>
   </div>
   <div class="ui-g-12">
       <h4>Высота</h4>
-      <p-button icon="fa fa-plus" iconPos="right" (click)="changeHeight('add')"></p-button>
-      <p-button icon="fa fa-minus" iconPos="right" (click)="changeHeight('rem')"></p-button>
-      <p-button icon="fa fa-check" iconPos="right"(click)="reset('height')"></p-button>
+      <p-button icon="fa fa-plus" iconPos="right" (click)="changeHeight('increase')"></p-button>
+      <p-button icon="fa fa-minus" iconPos="right" (click)="changeHeight('decrease')"></p-button>
+      <p-button icon="fa fa-undo" iconPos="right"(click)="reset('height')"></p-button>
   </div>
   <div class="ui-g-12">
     <button pButton type="button" (click)="display = false" label="Закрыть панель" icon="fa-close" iconPos="right" [ngStyle]="{'width':'100%'}"></button>

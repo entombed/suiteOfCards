@@ -14,16 +14,16 @@ export class MenuResizeAreaComponent implements OnInit {
 
   @Input()  inAreaProperties;
   display: boolean = false;
-  bodyArea;
+  // bodyArea;
 
   show() {
     this.display = true;
-    this.checkSizeArea();
+    // this.checkSizeArea();
   }
 
   checkSizeArea(){
     let mainArea;
-    this.bodyArea = document.querySelector('body')
+    // this.bodyArea = document.querySelector('body')
     mainArea = document.querySelector('.main-area').getBoundingClientRect();
     this.inAreaProperties.height = mainArea.height;
     this.inAreaProperties.width = mainArea.width;
@@ -32,8 +32,8 @@ export class MenuResizeAreaComponent implements OnInit {
   reset(data){
     switch(data){
       case 'width':
-        // this.inAreaProperties.width = '';
-        this.bodyArea.style.width = '';
+        this.inAreaProperties.width = '';
+        // this.bodyArea.style.width = '';
         break;
       case 'height':
         this.inAreaProperties.height = '';
@@ -44,11 +44,11 @@ export class MenuResizeAreaComponent implements OnInit {
   changeWidth(action){
     this.checkSizeArea();
     // this.bodyArea.style.width = action == 'add' ? this.bodyArea.clientWidth + this.inAreaProperties.step + 'px' : this.bodyArea.clientWidth - this.inAreaProperties.step + 'px';
-    this.inAreaProperties.width = action == 'add' ? this.inAreaProperties.width + this.inAreaProperties.step + 'px' : this.inAreaProperties.width - this.inAreaProperties.step + 'px';
+    this.inAreaProperties.width = action == 'increase' ? this.inAreaProperties.width + this.inAreaProperties.step + 'px' : this.inAreaProperties.width - this.inAreaProperties.step + 'px';
   }
 
   changeHeight(action){
     this.checkSizeArea();
-    this.inAreaProperties.height = action == 'add' ? this.inAreaProperties.height + this.inAreaProperties.step + 'px' : this.inAreaProperties.height - this.inAreaProperties.step + 'px';
+    this.inAreaProperties.height = action == 'increase' ? this.inAreaProperties.height + this.inAreaProperties.step + 'px' : this.inAreaProperties.height - this.inAreaProperties.step + 'px';
   }
 }
