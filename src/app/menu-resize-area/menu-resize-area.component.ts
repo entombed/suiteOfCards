@@ -43,8 +43,8 @@ export class MenuResizeAreaComponent implements OnInit {
 
   changeWidth(action){
     this.checkSizeArea();
-    this.bodyArea.style.width = action == 'add' ? this.bodyArea.clientWidth + this.inAreaProperties.step + 'px' : this.bodyArea.clientWidth - this.inAreaProperties.step + 'px';
-    // this.inAreaProperties.width = action == 'add' ? this.inAreaProperties.width + this.inAreaProperties.step + 'px' : this.inAreaProperties.width - this.inAreaProperties.step + 'px';
+    // this.bodyArea.style.width = action == 'add' ? this.bodyArea.clientWidth + this.inAreaProperties.step + 'px' : this.bodyArea.clientWidth - this.inAreaProperties.step + 'px';
+    this.inAreaProperties.width = action == 'add' ? this.inAreaProperties.width + this.inAreaProperties.step + 'px' : this.inAreaProperties.width - this.inAreaProperties.step + 'px';
   }
 
   changeHeight(action){

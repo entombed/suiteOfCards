@@ -29,7 +29,7 @@ export class DragAndDropItemService {
 
   start(event, target) {
     // let area = <HTMLElement>document.querySelector('body');
-    let area = document.querySelector('body').getBoundingClientRect();
+    let area = document.querySelector('.main-area').getBoundingClientRect();
     let box = event.target.getBoundingClientRect();
     this._zindex.addIndex(target);
 
